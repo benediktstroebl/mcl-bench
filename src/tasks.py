@@ -3,7 +3,7 @@ from typing import Literal, List, Dict, Optional, Any
 from itertools import product
 import os
 import json
-
+import hashlib
 
 from helpers import load_yaml, printv, json_to_dict
 
@@ -61,18 +61,12 @@ class Task:
     external_system_prompt: str = field(default=None)
     task_id: Optional[int] = field(default=None)
 
-    # Class variable for task ID counter
-    _id_counter: int = 0
 
     def __post_init__(self):
         if self.task_id is None:
-            type(self)._id_counter += 1
-            self.task_id = type(self)._id_counter
-        else:
-            # When loading from JSON, task_id is provided
-            # Update the counter if necessary
-            if self.task_id > type(self)._id_counter:
-                type(self)._id_counter = self.task_id
+            # Generate a hash-based task ID
+            self.task_id = self.generate_hash_id()
+
         if self.modality == 'image2image':
             raise NotImplementedError("image2image modality is not supported yet")
 
@@ -124,6 +118,18 @@ class Task:
         prompt += f"\nDOMAIN: {self.domain}\n"
         prompt += f"\nQUESTION:\n{self.intent}"
         return prompt
+    
+    def to_string(self):
+        return f"{self.modality} - {self.domain} - {self.lang} \
+            - {self.persona.age} - {self.persona.sex} - {self.persona.geo.location_str()}"
+    
+    def generate_hash_id(self):
+        """
+        Generates a unique hash ID for the task based on its string representation.
+        """
+        task_string = self.to_string()
+        hash_object = hashlib.md5(task_string.encode())  # Use hashlib.md5 for a fast hash
+        return hash_object.hexdigest()
 
 @dataclass
 class PromptProtocol:
@@ -273,6 +279,7 @@ class PromptProtocol:
             for task in tasks:
                 task.internal_system_prompt = self.internal_system_prompts.get(lang, "")
                 task.external_system_prompt = self.external_system_prompts.get(lang, "")
+                task.task_id = task.generate_hash_id()
         self.save_tasks(output_dir)
     
 
