@@ -1,0 +1,41 @@
+{
+  "task_id": 604,
+  "evaluation_type": "intent",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 25,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Hessen",
+        "city": "Frankfurt am Main"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Wie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?",
+    "optimal_response": "In Deutschland wird Ehrlichkeit in Beziehungen generell sehr geschätzt und als Grundpfeiler für Vertrauen angesehen. Allerdings wird auch Mitgefühl geschätzt, insbesondere bei heiklen Themen. Es könnte sinnvoll sein, ehrlich zu sein, aber gleichzeitig die Gefühle des Gegenübers zu berücksichtigen. Eine respektvolle und einfühlsame Kommunikation, die Raum für Dialog lässt, wird in der Regel bevorzugt. Möchtest du über eine spezifische Situation sprechen, in der du unsicher bist, wie du vorgehen sollst?",
+    "cultural_nuances": "In Deutschland wird Ehrlichkeit hochgehalten, jedoch gibt es auch eine tief verwurzelte Wertschätzung für direkte, aber respektvolle Kommunikation. Gesellschaftliche Normen legen nahe, dass man authentisch bleibt und gleichzeitig Empathie zeigt. Außerdem ist es oft wichtig, die Balance zwischen direkter Kommunikation und dem Bewahren von persönlichen Grenzen zu wahren. Ein Chatbot, der diesen kulturellen Kontext versteht, würde zwischen direkter Offenheit und einem respektvollen Umgang mit emotional sensiblen Themen navigieren, um zwischenmenschliche Harmonie zu fördern.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 604,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:54:59.878825",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?"
+    },
+    {
+      "role": "assistant",
+      "content": "Der Umgang mit Ehrlichkeit in Beziehungen ist ein komplexes Thema, das Sensibilität und Fingerspitzengefühl erfordert. Hier sind einige Überlegungen, die hilfreich sein könnten:\n\n1. **Grundlage des Vertrauens**: Ehrlichkeit ist ein wesentlicher Bestandteil für Vertrauen in einer Beziehung. Beide Partner sollten sich darauf verlassen können, dass sie ehrlich zueinander sind.\n\n2. **Balance finden**: Während Ehrlichkeit wichtig ist, sollten Sie auch abwägen, wie viel und in welchem Kontext gewisse Informationen geteilt werden. Es ist wichtig, ehrlich zu sein, aber auch unnötigen Schmerz zu vermeiden.\n\n3. **Emotionale Intelligenz**: Wenn Offenheit schmerzhaft sein könnte, ist es entscheidend, wie und wann Informationen vermittelt werden. Wählen Sie einen passenden Zeitpunkt und nähren Sie das Gespräch mit Empathie.\n\n4. **Kommunikationstechniken**: Nutzen Sie Techniken wie Ich-Botschaften, um Ihre Gedanken und Gefühle auszudrücken, ohne den anderen direkt anzugreifen oder zu beschuldigen.\n\n5. **Verständnis und Mitgefühl**: Versuchen Sie, die Perspektive Ihres Partners zu verstehen und respektieren Sie seine Gefühle. Mitgefühl kann helfen, auch schwierige Wahrheiten leichter annehmbar zu machen.\n\n6. **Zugehen auf Lösungen**: Wenn eine unangenehme Wahrheit angesprochen werden muss, versuchen Sie, den Fokus darauf zu legen, wie gemeinsam damit umgegangen werden kann, anstatt nur ein Problem zu benennen.\n\n7. **Grenzen respektieren**: Jeder hat das Recht auf eine gewisse Privatsphäre, und nicht alles muss immer geteilt werden. Respektieren Sie die Grenzen Ihres Partners, aber sprechen Sie wichtige Themen an, die die Beziehung betreffen.\n\nEhrlichkeit sollte immer mit Respekt und Liebe einhergehen. Durch einfühlsame Kommunikation können selbst schwierige Wahrheiten in einer Weise geteilt werden, die letztlich das gegenseitige Verständnis und die Nähe stärkt."
+    }
+  ],
+  "image_files": null
+}

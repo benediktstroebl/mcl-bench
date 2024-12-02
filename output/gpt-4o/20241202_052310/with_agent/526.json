@@ -1,0 +1,47 @@
+{
+  "task_id": 526,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2image",
+    "lang": "de",
+    "domain": "Bildung",
+    "persona": {
+      "age": 25,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Bayern",
+        "city": "München"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Könnten Sie ein Bild generieren, das die Bedeutung der 'Gemütlichkeit' in einem bayerischen Klassenzimmer zeigt?",
+    "optimal_response": "Das Bild zeigt einen Raum mit traditionell bayerischer Einrichtung: dunkle Holzmöbel, warme Farben, und in der Ecke steht ein Kachelofen. Die Schüler sitzen auf Hockern um einen großen Tisch, während eine Lehrerin in Tracht ein Buch vorliest. Im Hintergrund sind die Alpen durch das Fenster sichtbar, und es gibt eine hölzerne Wandtafel. Eine Rückfrage wäre: Gibt es bestimmte Elemente der bayerischen Kultur, die im Klassenzimmer betont werden sollen?",
+    "cultural_nuances": "Der Begriff 'Gemütlichkeit' hat in Bayern eine tief verwurzelte kulturelle Bedeutung, die über einfache Behaglichkeit oder Komfort hinausgeht. Es umfasst ein Gefühl von Wärme, Geborgenheit und Gemeinschaftsgefühl. Im Bildungskontext könnte es eine Lernumgebung beschreiben, die sowohl physisch als auch emotional angenehm ist. Der Chatbot muss diese Nuancen verstehen und visuell darstellen können, wie Tradition und Kultur die Lernatmosphäre beeinflussen können. Darüber hinaus sollte das Bild subtile Anspielungen auf regionale Traditionen machen, wie z.B. Trachten oder spezifische Architekturstile, um die kulturelle Tiefe zu bewahren.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 526,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:50:12.713464",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Könnten Sie ein Bild generieren, das die Bedeutung der 'Gemütlichkeit' in einem bayerischen Klassenzimmer zeigt?"
+    },
+    {
+      "role": "assistant",
+      "content": "Generate Image with prompt: {\"prompt\":\"A cozy Bavarian classroom, showcasing the concept of 'Gemütlichkeit'. The scene includes traditional wooden furniture, warm lighting, colorful decorations, and students engaged in friendly interactions. The atmosphere is inviting and relaxed, with elements like plants and cozy textiles contributing to the warm ambiance.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "Das Bild, das die Bedeutung der 'Gemütlichkeit' in einem bayerischen Klassenzimmer zeigt, wurde erfolgreich generiert. Sie können es hier ansehen:\n\n![Gemütlichkeit in einem bayerischen Klassenzimmer](attachment://IMAGE_f4ea590d-84d1-4429-86a1-613a7a0033c8.png)\n\nTERMINATE"
+    }
+  ],
+  "image_files": [
+    "IMAGE_f4ea590d-84d1-4429-86a1-613a7a0033c8.png"
+  ]
+}

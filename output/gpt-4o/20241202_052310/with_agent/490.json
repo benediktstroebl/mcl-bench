@@ -1,0 +1,47 @@
+{
+  "task_id": 490,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2image",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 44,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Sachsen",
+        "city": "Chemnitz"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Bitte erstellen Sie ein Bild, das die Werte von Ehrlichkeit und Gemeinschaft symbolisiert, nicht nur im Alltag, sondern auch in Zeiten von gesellschaftlichem Wandel und Herausforderungen. Wie könnte das visuell dargestellt werden, um die Essenz unserer lokalen Traditionen in Sachsen einzufangen?",
+    "optimal_response": "Ein Bild, das diese Werte symbolisiert, könnte eine sächsische Landschaft darstellen, mit einer Gruppe von Menschen, die zusammenarbeiten, um etwas Gemeinsames zu schaffen, wie z. B. das Aufstellen eines traditionellen Weihnachtsmarktes. Diese Szene könnte umrahmt sein von historischen Gebäuden aus Chemnitz, um den Zusammenhalt zwischen Vergangenheit und Gegenwart zu verdeutlichen. Welche spezifischen Details würden Sie gern hinzufügen, um die persönliche Bedeutung für Sie zu verstärken?",
+    "cultural_nuances": "In Sachsen und insbesondere in Chemnitz spielen Gemeinschaftsprojekte und die Erhaltung traditioneller Feste und Märkte eine wichtige Rolle. Diese symbolisieren nicht nur lokale Werte wie Ehrlichkeit und Kooperation, sondern sind auch Ausdruck kultureller Identität und Kontinuität. Ein genaues Verständnis erfordert die Wertschätzung sowohl der historischen als auch der modernen Einflüsse auf das gesellschaftliche Leben in der Region, sowie Kenntnis darüber, wie die Menschen in Zeiten des Wandels zusammenkommen, um ihre Kultur zu bewahren und weiterzuentwickeln. Die bildliche Darstellung solcher Werte muss daher sensibel mit diesen Elementen umgehen.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 490,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:50:34.594650",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bitte erstellen Sie ein Bild, das die Werte von Ehrlichkeit und Gemeinschaft symbolisiert, nicht nur im Alltag, sondern auch in Zeiten von gesellschaftlichem Wandel und Herausforderungen. Wie könnte das visuell dargestellt werden, um die Essenz unserer lokalen Traditionen in Sachsen einzufangen?"
+    },
+    {
+      "role": "assistant",
+      "content": "Generate Image with prompt: {\"prompt\":\"A symbolic representation of honesty and community in the context of daily life and societal change, incorporating elements of local traditions in Saxony. The image should depict people collaborating, sharing, and supporting each other in a picturesque Saxon landscape. Include traditional Saxon architecture and cultural symbols, like folk costumes or crafts, to highlight the essence of community values amidst challenges.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "Das Bild, das die Werte von Ehrlichkeit und Gemeinschaft symbolisiert und die Essenz der lokalen Traditionen in Sachsen einfängt, wurde erstellt. Sie können es hier sehen:\n\n![Honesty and Community in Saxony](attachment://IMAGE_3c0c407c-0384-4c5d-9350-08b2c22d38ad.png)\n\nTERMINATE"
+    }
+  ],
+  "image_files": [
+    "IMAGE_3c0c407c-0384-4c5d-9350-08b2c22d38ad.png"
+  ]
+}
