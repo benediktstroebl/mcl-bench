@@ -1,0 +1,41 @@
+{
+  "task_id": 141,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "moral discipline and social values",
+    "persona": {
+      "age": 44,
+      "sex": "female",
+      "geo": {
+        "country": "United States",
+        "state": "California",
+        "city": "San Francisco"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "How can one balance ambition and contentment in life?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 141,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:28:56.946877",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 44\n\tSex: female\n\tLanguage: en\n\tNationality:\n\t\tCountry: United States\n\t\tState: California\n\t\tCity: San Francisco\n\nQUESTION:\nHow can one balance ambition and contentment in life?"
+    },
+    {
+      "role": "assistant",
+      "content": "Balancing ambition and contentment is a nuanced journey that involves self-awareness, intention, and flexibility. Here are some strategies that might resonate with you:\n\n1. **Define Personal Values**: Understand what is truly important to you. Align your ambitions with your core values and ensure they contribute to your overall fulfillment.\n\n2. **Set Realistic Goals**: Break your larger ambitions into smaller, achievable goals. This helps in avoiding overwhelm and allows for a steady sense of accomplishment.\n\n3. **Practice Gratitude**: Regularly acknowledge and appreciate what you currently have. This can foster a sense of contentment while still striving for more.\n\n4. **Embrace the Journey**: Shift focus from just achieving the end result to enjoying the process. This can provide satisfaction in the present moment.\n\n5. **Create Boundaries**: Decide how much time and energy you want to dedicate to your ambitions versus other areas of life. This helps maintain a healthy balance.\n\n6. **Reflect and Adjust**: Periodically review your ambitions and the satisfaction they bring. Be open to redefining what success and contentment mean to you as circumstances change.\n\n7. **Incorporate Mindfulness and Reflection**: Spend time regularly reflecting on your goals and your current state. Practices like meditation or journaling can provide clarity and perspective.\n\n8. **Seek Support and Inspiration**: Engage with like-minded individuals who can support your goals while keeping you grounded. Their insights and experiences can provide motivation and reassurance.\n\nBy consciously implementing these strategies, you can find a balance that allows you to pursue your ambitions while enjoying the present moment."
+    }
+  ],
+  "image_files": null
+}

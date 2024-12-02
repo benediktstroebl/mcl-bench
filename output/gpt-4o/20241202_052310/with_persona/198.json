@@ -1,0 +1,41 @@
+{
+  "task_id": 198,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "economy",
+    "persona": {
+      "age": 25,
+      "sex": "female",
+      "geo": {
+        "country": "United States",
+        "state": "Texas",
+        "city": "Austin"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "Could you shed some light on how the Lone Star State's economic engines are firing lately, especially with all that's been brewing in the tech sector and the energy space? Any hidden pressures I should keep an eye on?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 198,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:25:48.071173",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 25\n\tSex: female\n\tLanguage: en\n\tNationality:\n\t\tCountry: United States\n\t\tState: Texas\n\t\tCity: Austin\n\nQUESTION:\nCould you shed some light on how the Lone Star State's economic engines are firing lately, especially with all that's been brewing in the tech sector and the energy space? Any hidden pressures I should keep an eye on?"
+    },
+    {
+      "role": "assistant",
+      "content": "The Lone Star State, particularly areas like Austin, has been a focal point of economic growth, primarily driven by the technology and energy sectors. Let's break down the current trends and potential pressures:\n\n1. **Tech Sector**: \n   - Austin is often referred to as \"Silicon Hills\" due to its booming tech industry. Major tech companies like Apple, Google, Facebook, and Tesla have expanded their operations here, boosting employment and economic activity.\n   - The influx of tech companies contributes to a vibrant startup ecosystem, supported by venture capital investment and innovation-friendly policies.\n   - There is a strong push towards AI, cybersecurity, and software development, with local universities like the University of Texas at Austin fueling talent pipelines.\n\n2. **Energy Sector**:\n   - Texas remains a powerhouse in the energy industry, especially concerning oil and gas. The Permian Basin continues to be one of the most prolific oil-producing regions in the U.S.\n   - The state is also a leader in renewable energy, particularly wind and solar, with significant investments enhancing energy diversity and sustainability.\n   - Energy infrastructure, such as the electricity grid, is receiving attention after challenges during extreme weather events, highlighting the need for modernization and resilience.\n\n3. **Economic Growth and Pressures**:\n   - Texas has benefited from a strong economic recovery post-pandemic, partly due to fewer restrictions on businesses and proactive economic policies.\n   - However, there are pressures to consider:\n     - **Housing Market**: The tech boom has escalated housing demand, leading to rising property prices and concerns about affordability in cities like Austin.\n     - **Labor Market**: While job growth is strong, there's increasing competition for skilled workers, leading to potential wage pressures.\n     - **Infrastructure Strain**: Rapid growth has put pressure on infrastructure, necessitating upgrades in transportation and utilities.\n     - **Regulatory and Environmental Challenges**: Balancing growth with environmental sustainability and regulatory compliance remains a challenge, especially in the energy sector.\n\nOverall, while Texas's economic engines are robust, particularly in tech and energy, it's essential to remain attentive to housing affordability, labor market dynamics, and the need for sustainable infrastructure development to maintain balanced growth. Keeping an eye on these factors will provide a more comprehensive understanding of the state's evolving economic landscape."
+    }
+  ],
+  "image_files": null
+}

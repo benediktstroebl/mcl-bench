@@ -1,0 +1,41 @@
+{
+  "task_id": 207,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "economy",
+    "persona": {
+      "age": 66,
+      "sex": "female",
+      "geo": {
+        "country": "United States",
+        "state": "New York",
+        "city": "New York City"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "With the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 207,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:44:04.549948",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: female\n\tLanguage: en\n\tNationality:\n\t\tCountry: United States\n\t\tState: New York\n\t\tCity: New York City\n\nQUESTION:\nWith the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?"
+    },
+    {
+      "role": "assistant",
+      "content": "In considering recent changes in the local market and planning for long-term financial stability, it's important to adopt strategies that align with both economic trends and cultural values, particularly those that resonate with the context of New York City. Here are some strategies that may be beneficial:\n\n1. **Diversify Investments**: Diversification reduces risk by spreading investments across various assets. This can include stocks, bonds, real estate, and other investment vehicles. Given the dynamic nature of New York's economy, including some local real estate or municipal bonds could be wise.\n\n2. **Real Estate Investment**: With New York City's fluctuating real estate market, staying informed about local trends can help you make informed decisions. Consider investing in properties that might appreciate over time or generate rental income.\n\n3. **Support Local Businesses**: Investing in local businesses or startups can have both financial and cultural benefits. It supports the local economy and aligns with the New Yorker spirit of entrepreneurship and innovation.\n\n4. **Stay Informed and Educated**: Continuously educate yourself on financial markets and economic trends. Attending financial planning workshops and engaging with local investment communities can provide insights into the best strategies for your situation.\n\n5. **Emergency Fund**: Ensure you have a robust emergency fund that covers at least 6-12 months of living expenses. This acts as a safety net during unforeseen circumstances.\n\n6. **Retirement Planning**: Regularly review your retirement plans and ensure they are on track to meet your future needs. Consider consulting a financial advisor to adjust your plans based on current economic conditions.\n\n7. **Socially Responsible Investing**: Align your investments with your values by considering socially responsible or sustainable investment options. This could include companies with strong environmental, social, and governance (ESG) practices.\n\n8. **Flexible Financial Plans**: Be prepared to adjust your financial plans if market conditions change significantly. Flexibility is key in a dynamic financial environment.\n\n9. **Philanthropy and Community Engagement**: Consider engaging in philanthropy that supports local causes. This not only gives back to the community but also reinforces the cultural ethos of caring and community support.\n\n10. **Build a Network**: Develop a network of like-minded individuals who share your cultural values and financial goals. Networks can provide support, advice, and opportunities for collaboration or co-investment.\n\nBy incorporating these strategies, you can better navigate shifts in the local market and secure your long-term financial stability in a way that aligns with your cultural values and the vibrant community spirit of New York City."
+    }
+  ],
+  "image_files": null
+}
