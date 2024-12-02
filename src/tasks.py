@@ -5,7 +5,7 @@ import os
 import json
 
 
-from helpers import load_yaml, printv
+from helpers import load_yaml, printv, json_to_dict
 
 
 @dataclass
@@ -54,6 +54,8 @@ class Task:
     domain: str = field(default=None)
     persona: Persona = field(default=None)
     intent: str = field(default=None)
+    optimal_response: str = field(default=None)
+    cultural_nuances: str = field(default=None)
     external_files: List[str] = field(default_factory=list)
     internal_system_prompt: str = field(default=None)
     external_system_prompt: str = field(default=None)
@@ -74,8 +76,22 @@ class Task:
         if self.modality == 'image2image':
             raise NotImplementedError("image2image modality is not supported yet")
 
-    def update_intent(self, intent: str):
-        self.intent = intent
+    def update_intent(self, intent: dict):
+        if isinstance(intent, str):
+            intent = json_to_dict(intent)
+
+        try: 
+            self.intent = intent['intent']
+        except KeyError:
+            print(f"Error: 'intent' key not found in response: {intent}")
+        try:
+            self.optimal_response = intent['optimal_response']
+        except KeyError:
+            print(f"Error: 'optimal_response' key not found in response: {intent}")
+        try:
+            self.cultural_nuances = intent['cultural_nuances']
+        except KeyError:
+            print(f"Error: 'cultural_nuances' key not found in response: {intent}")
 
     def update_external_files(self, external_files: List[str]):
         self.external_files = external_files
@@ -106,7 +122,13 @@ class Task:
             f"Image file: {self.external_files}"
         )
         return prompt
-
+    
+    def prompt_agent(self) -> str: 
+        prompt = "Given the following details about the user, please respond to the question below:"
+        prompt += f"\n\nUSER INFORMATION:\n{self.persona.generate_prompt()}\n"
+        prompt += f"\nDOMAIN: {self.domain}\n"
+        prompt += f"\nQUESTION:\n{self.intent}"
+        return prompt
 
 @dataclass
 class PromptProtocol:
@@ -179,7 +201,7 @@ class PromptProtocol:
 
         return result
 
-    def save_tasks(self, output_dir: str = 'data/tasks'):
+    def save_tasks(self, output_dir: str = 'data/tasks', langs: Optional[List[str]] = None):
         """
         Save the country_specific_dict to JSON files, one per language.
 
@@ -190,6 +212,8 @@ class PromptProtocol:
 
         os.makedirs(output_dir, exist_ok=True)
         for lang, tasks in self.country_specific_dict.items():
+            if langs and lang not in langs:
+                continue
             data_to_save = [asdict(task) for task in tasks]
             file_path = os.path.join(output_dir, f'{lang}_tasks.json')
             try:

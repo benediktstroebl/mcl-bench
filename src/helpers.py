@@ -1,4 +1,6 @@
 import yaml
+import json
+
 
 def load_yaml(file_path: str) -> dict:
     """
@@ -31,3 +33,21 @@ def printv(message, verbosity=0):
     """
     if verbosity == 1:
         print(message)
+
+
+def json_to_dict(json_string):
+    """
+    Converts a JSON string to a Python dictionary.
+
+    Args:
+        json_string (str): A string containing JSON data.
+
+    Returns:
+        dict: A Python dictionary if the conversion is successful.
+        None: If the JSON string is invalid.
+    """
+    try:
+        return json.loads(json_string)
+    except json.JSONDecodeError as e:
+        print(f"Invalid JSON: {e}")
+        return None

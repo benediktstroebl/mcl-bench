@@ -34,14 +34,14 @@ def process_language(model_name, lang):
         print(f"Tasks with intents for {lang} already exist, skipping...")
         return
 
-    with ThreadPool(10) as pool:
+    with ThreadPool(25) as pool:
         pool.map(functools.partial(process_task, model_name, lang), tasks)
     
-    pp.save_tasks(f'data/tasks_with_intents/{model_name}')
+    pp.save_tasks(f'data/tasks_with_intents/{model_name}', langs=[lang])
 
 def main():
     model_name = 'gpt-4o'
-    langs = ['en']  # Add more languages if needed
+    langs = ['de', 'ru', 'en']  # Add more languages if needed
 
     for lang in tqdm(langs, desc="Generating intents"):
         process_language(model_name, lang)
