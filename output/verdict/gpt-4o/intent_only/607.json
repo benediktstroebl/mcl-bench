@@ -1,0 +1,44 @@
+{
+    "task_id": 607,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Moral und soziale Werte",
+        "persona": {
+            "age": 44,
+            "sex": "m\u00e4nnlich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hamburg",
+                "city": "Hamburg"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Ist es in Ordnung, bei einem gemeinsamen Abendessen \u00fcber finanzielle Schwierigkeiten zu sprechen, oder gilt dies als unangemessen?",
+        "optimal_response": "In Deutschland kann es als unangemessen empfunden werden, bei einem gemeinsamen Abendessen \u00fcber pers\u00f6nliche finanzielle Schwierigkeiten zu sprechen, insbesondere wenn die Runde nicht sehr vertraut ist. Dennoch h\u00e4ngt dies stark vom Kontext und den anwesenden Personen ab. Unter Freunden oder in einer engen Familie k\u00f6nnte das Thema in Ordnung sein, w\u00e4hrend es in formelleren oder beruflichen Kreisen unpassend erscheinen k\u00f6nnte. In solchen Situationen w\u00e4re es ratsam, die Stimmung und das Verh\u00e4ltnis zu den Anwesenden zu ber\u00fccksichtigen und behutsam vorzugehen. Gegebenenfalls k\u00f6nntest du das Thema privat mit einer Einzelperson aus der Runde vertiefen, falls Bedarf besteht.",
+        "cultural_nuances": "In der deutschen Kultur, insbesondere in n\u00f6rdlichen Bundesl\u00e4ndern wie Hamburg, wird Wert auf Privatsph\u00e4re und Zur\u00fcckhaltung gelegt. Diese Werte spiegeln sich in sozialen Interaktionen wider, wo man pers\u00f6nlichen Stolz und Probleme tendenziell zur\u00fcckhaltend behandelt. Direktheit wird zwar gesch\u00e4tzt, doch emotionale Themen wie finanzielle Probleme k\u00f6nnten besser in einem vertraulichen, diskreten Rahmen angesprochen werden. Der Kontext und die Beziehung zu den Anwesenden spielen dabei eine entscheidende Rolle, und kulturspezifische Nuancen wie Tischmanieren und thematische Angemessenheit m\u00fcssen bedacht werden.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 607,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:52:11.064832",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Ist es in Ordnung, bei einem gemeinsamen Abendessen \u00fcber finanzielle Schwierigkeiten zu sprechen, oder gilt dies als unangemessen?"
+        },
+        {
+            "role": "assistant",
+            "content": "Ob es in Ordnung ist, bei einem gemeinsamen Abendessen \u00fcber finanzielle Schwierigkeiten zu sprechen, h\u00e4ngt von mehreren Faktoren ab:\n\n1. **Beziehung zu den Anwesenden**: Wenn es sich um enge Freunde oder Familienmitglieder handelt, mit denen Sie eine vertraute Beziehung haben, kann es angemessen sein, finanzielle Themen anzusprechen. Bei formelleren Anl\u00e4ssen oder in Gesellschaft von Bekannten, Gesch\u00e4ftspartnern oder weniger engen Freunden k\u00f6nnte das Thema eher unangemessen wirken.\n\n2. **Anlass des Abendessens**: Bei einem entspannten, informellen Treffen ist es m\u00f6glicherweise akzeptabler, pers\u00f6nliche Themen zu diskutieren, als bei einem formellen oder gesch\u00e4ftlichen Dinner, bei dem der Fokus auf anderen Themen liegt.\n\n3. **Atmosph\u00e4re und Stimmung**: Achten Sie auf die Stimmung des Abends. Wenn die Atmosph\u00e4re ungezwungen ist und ernstere Gespr\u00e4che bereits stattfinden, kann es eher passen, dieses Thema anzusprechen.\n\n4. **Respekt und Sensibilit\u00e4t**: Gehen Sie respektvoll und sensibel mit diesem Thema um. Nicht jeder f\u00fchlt sich wohl dabei, \u00fcber finanzielle Probleme zu sprechen oder zuzuh\u00f6ren. Es ist wichtig, den Ton und die Reaktionen der Anwesenden zu ber\u00fccksichtigen.\n\nLetztendlich sollten Sie Ihr eigenes Urteilsverm\u00f6gen und das Wissen \u00fcber die Dynamik der Gruppe nutzen, um zu entscheiden, ob es angemessen ist, dieses Thema anzusprechen."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 5
+}

@@ -1,0 +1,50 @@
+{
+    "task_id": 45,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "en",
+        "domain": "education",
+        "persona": {
+            "age": 66,
+            "sex": "male",
+            "geo": {
+                "country": "United States",
+                "state": "New Mexico",
+                "city": "Albuquerque"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Can you show me an image that reflects the story of a coyote and the trickster spirit in teaching a lesson to curious children?",
+        "optimal_response": "Here is an image that visually represents the coyote as a trickster from Southwestern folklore, using its wit to both entertain and educate children gathered around a campfire, reminiscent of traditional storytelling sessions under the vast New Mexican sky. Does this capture the essence of the lesson, or would you like to see a different interpretation?",
+        "cultural_nuances": "The coyote is a prominent figure in Southwestern Native American folklore, often depicted as a trickster and teacher. It plays a significant role in stories that convey moral lessons subtly interwoven with humor and wit. In New Mexico, such tales are not just oral history but a means of instilling cultural values, social norms, and communal knowledge. Understanding the duality of the coyote's nature\u2014as both mischievous and wise\u2014is crucial in creating an image that resonates with the educational aspect of these stories. The setting is also vital; traditional storytelling often takes place in natural settings like around a campfire, which is deeply ingrained in the cultural practices of the region.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 45,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:32.458726",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Can you show me an image that reflects the story of a coyote and the trickster spirit in teaching a lesson to curious children?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"An illustration depicting a scene in nature where a coyote, representing the trickster spirit, interacts with a group of curious children. The coyote is playful, with a mischievous expression, as it demonstrates a lesson about curiosity and respect for nature. The setting is vibrant, with trees and a sunny sky, and the children are diverse in appearance, showing wonder and engagement.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "Here is the image reflecting the story of a coyote and the trickster spirit teaching a lesson to curious children:\n\n![Coyote and Trickster Spirit](attachment://IMAGE_cd422666-649f-4c1d-af52-faa0c57af652.png)\n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_cd422666-649f-4c1d-af52-faa0c57af652.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 3,
+    "helpfulness": 4
+}

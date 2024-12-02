@@ -1,0 +1,44 @@
+{
+    "task_id": 671,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 66,
+            "sex": "m\u00e4nnlich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Bayern",
+                "city": "M\u00fcnchen"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "K\u00f6nnten Sie mir bitte einige Einblicke geben, wie der bayerische wirtschaftliche Ansatz die Wettbewerbsf\u00e4higkeit in einem globalisierten Markt beeinflusst, besonders im Hinblick auf unsere traditionelle Mittelstandskultur?",
+        "optimal_response": "In Bayern spielt der Mittelstand eine zentrale Rolle in der Wirtschaft. Diese Unternehmen sind oft familiengef\u00fchrt und legen gro\u00dfen Wert auf langj\u00e4hrige Gesch\u00e4ftsbeziehungen, Qualit\u00e4t und Innovation. Die bayerische wirtschaftliche Strategie hat Erfolg, weil sie globale Trends mit lokalem Wissen kombiniert. K\u00f6nnen Sie mir sagen, auf welchen spezifischen Sektor oder auf welche besondere Herausforderung Sie sich konzentrieren m\u00f6chten? Diese Informationen k\u00f6nnten helfen, eine gezieltere Analyse vorzunehmen.",
+        "cultural_nuances": "In Bayern ist der 'Mittelstand' nicht nur wirtschaftlich, sondern auch kulturell tief verwurzelt. Diese Unternehmen sind oft generationen\u00fcbergreifend und stark in der lokalen Gemeinschaft verwurzelt. Es ist wichtig, die enge Verbindung von Tradition und Innovation zu verstehen, die diese Unternehmen als erfolgreich erkennbar macht. Einfl\u00fcsse wie das Festhalten an traditionellen bayerischen Werten und gleichzeitig technologischer Fortschritt spielen in der Wettbewerbsf\u00e4higkeit eine Rolle. Der Respekt vor solchen Unternehmensformen und ihrem Beitrag zur Gemeinschaft sollte verstanden und wertgesch\u00e4tzt werden.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 671,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:55:21.386594",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: m\u00e4nnlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Bayern\n\t\tCity: M\u00fcnchen\n\nQUESTION:\nK\u00f6nnten Sie mir bitte einige Einblicke geben, wie der bayerische wirtschaftliche Ansatz die Wettbewerbsf\u00e4higkeit in einem globalisierten Markt beeinflusst, besonders im Hinblick auf unsere traditionelle Mittelstandskultur?"
+        },
+        {
+            "role": "assistant",
+            "content": "Bayern hat einen sehr spezifischen wirtschaftlichen Ansatz, der stark von seiner traditionellen Mittelstandskultur gepr\u00e4gt ist. Der Mittelstand, der in Bayern eine wesentliche Rolle spielt, umfasst viele Familienunternehmen, die oft seit Generationen bestehen. Hier sind einige Einblicke, wie dieser Ansatz die Wettbewerbsf\u00e4higkeit in einem globalisierten Markt beeinflusst:\n\n1. **Innovationskraft und Spezialisierung**: Der bayerische Mittelstand legt gro\u00dfen Wert auf Innovation und Spezialisierung. Viele Unternehmen sind in Nischenm\u00e4rkten t\u00e4tig, in denen sie hochwertige Produkte anbieten und kontinuierlich in Forschung und Entwicklung investieren. Dies hilft ihnen, sich international zu differenzieren und wettbewerbsf\u00e4hig zu bleiben.\n\n2. **Berufsausbildung und Fachkr\u00e4fte**: Bayern verf\u00fcgt \u00fcber ein starkes duales Ausbildungssystem, das qualifizierte Fachkr\u00e4fte hervorbringt, die den spezifischen Anforderungen der mittelst\u00e4ndischen Unternehmen gerecht werden. Diese gut ausgebildeten Arbeitskr\u00e4fte tragen zur Effizienz und Kompetenz der Unternehmen bei, was auf dem globalen Markt ein entscheidender Vorteil ist.\n\n3. **Netzwerke und Cluster**: In Bayern gibt es zahlreiche Wirtschaftskluster und Netzwerke, die den Austausch und die Zusammenarbeit zwischen Unternehmen, Universit\u00e4ten und Forschungsinstituten f\u00f6rdern. Diese Kooperationen st\u00e4rken den Wissensaustausch und Innovationen, was die globale Wettbewerbsf\u00e4higkeit der Unternehmen weiter verbessert.\n\n4. **Unterst\u00fctzende Infrastruktur und Politik**: Die bayerische Regierung unterst\u00fctzt den Mittelstand durch eine stabile Infrastruktur und gezielte F\u00f6rderprogramme. Diese Unterst\u00fctzung erleichtert Unternehmen den Zugang zu internationalen M\u00e4rkten und st\u00e4rkt ihre \u00f6kologische Nachhaltigkeit, was auch international zunehmend an Bedeutung gewinnt.\n\n5. **Tradition und Werte**: Die Pflege traditionsreicher Werte wie Qualit\u00e4t, Zuverl\u00e4ssigkeit und Kundenzufriedenheit ist ein weiteres Merkmal des bayerischen Mittelstands. Diese Werte genie\u00dfen weltweit hohes Ansehen und verschaffen bayerischen Unternehmen einen Wettbewerbsvorteil.\n\n6. **Digitalisierung**: Trotz der traditionellen Basis hat der bayerische Mittelstand begonnen, die Digitalisierung als zentralen Bestandteil ihrer Gesch\u00e4ftsstrategie zu integrieren. Dies hilft ihnen, effizienter zu werden und ihre Reichweite zu internationalisieren.\n\nInsgesamt erm\u00f6glicht der bayerische wirtschaftliche Ansatz eine Balance zwischen Traditionsbewusstsein und modernem Innovationsstreben, was es den Unternehmen erlaubt, sich in einem zunehmend globalisierten und wettbewerbsorientierten Marktumfeld zu behaupten."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

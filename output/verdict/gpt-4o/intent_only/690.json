@@ -1,0 +1,44 @@
+{
+    "task_id": 690,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 66,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Sachsen",
+                "city": "Chemnitz"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Was sind die besten Strategien, um in einem wirtschaftlich herausfordernden Umfeld zu investieren, w\u00e4hrend man den s\u00e4chsischen Sparsamkeitsgeist bewahrt?",
+        "optimal_response": "Es ist wichtig, in einem herausfordernden wirtschaftlichen Umfeld sorgf\u00e4ltig abzuw\u00e4gen, in welche Bereiche investiert werden sollte. Im Einklang mit dem s\u00e4chsischen Sparsamkeitsgeist k\u00f6nnten Sie erw\u00e4gen, in solide, langfristige Investitionen mit geringem Risiko zu investieren. Eine M\u00f6glichkeit k\u00f6nnte sein, lokale Unternehmen oder Projekte zu unterst\u00fctzen, die Nachhaltigkeit und regionale Entwicklung f\u00f6rdern. Haben Sie spezielle Interessenbereiche oder Branchen im Sinn, die f\u00fcr Sie von Bedeutung sind? Vielleicht k\u00f6nnten auch Genossenschaften oder Kommunalprojekte eine \u00dcberlegung wert sein, die traditionell einen Gemeinschaftssinn verk\u00f6rpern und gleichzeitig zur regionalen Stabilit\u00e4t beitragen.",
+        "cultural_nuances": "Der s\u00e4chsische Kulturhintergrund legt gro\u00dfen Wert auf Sparsamkeit und kluge Finanzplanung. Diese Herangehensweise ist oft von generationen\u00fcbergreifenden Strategien gepr\u00e4gt, die Stabilit\u00e4t und Nachhaltigkeit betonen. Zudem wird in Sachsen h\u00e4ufig ein starker Gemeinschaftssinn gepflegt, bei dem lokal orientierte Investitionen bevorzugt werden, um die regionale Wirtschaft zu st\u00e4rken. Ein Verst\u00e4ndnis f\u00fcr diesen kulturellen Kontext vermeidet es, Vorschl\u00e4ge zu machen, die als zu riskant oder extravagant angesehen werden k\u00f6nnten, und f\u00f6rdert stattdessen Ans\u00e4tze, die der Mentalit\u00e4t der Langfristigkeit und Solidit\u00e4t entsprechen.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 690,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:50:45.113768",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Was sind die besten Strategien, um in einem wirtschaftlich herausfordernden Umfeld zu investieren, w\u00e4hrend man den s\u00e4chsischen Sparsamkeitsgeist bewahrt?"
+        },
+        {
+            "role": "assistant",
+            "content": "In einem wirtschaftlich herausfordernden Umfeld ist es wichtig, kluge und umsichtige Investitionsstrategien zu verfolgen, die sowohl das Potenzial f\u00fcr Renditen maximieren als auch das Risiko minimieren, im Einklang mit dem s\u00e4chsischen Sparsamkeitsgeist. Hier sind einige Strategien, die ber\u00fccksichtigt werden k\u00f6nnen:\n\n1. **Diversifikation des Portfolios**: Streuen Sie Ihr Investment \u00fcber verschiedene Anlageklassen wie Aktien, Anleihen, Immobilien und Rohstoffe. Diversifikation kann helfen, das Risiko zu minimieren, da die Performance verschiedener Anlageklassen oft unkorreliert ist.\n\n2. **Investition in Qualit\u00e4tsaktien**: Suchen Sie nach Unternehmen mit soliden Bilanzen, einer stabilen Ertragslage und einer guten Marktstellung. Diese Unternehmen sind in der Regel widerstandsf\u00e4higer in wirtschaftlich schwierigen Zeiten.\n\n3. **Fokus auf Dividendenaktien**: Investitionen in Unternehmen, die regelm\u00e4\u00dfig Dividenden zahlen, k\u00f6nnen eine stabilere Einkommensquelle darstellen und einen Puffer gegen Kursverluste bieten.\n\n4. **Kosteneffizientes Investieren**: Achten Sie auf die Kosten Ihrer Investments, wie Managementgeb\u00fchren und Transaktionskosten. G\u00fcnstige Indexfonds oder ETFs k\u00f6nnen eine geeignete Option sein, um kosteneffizient zu investieren.\n\n5. **Liquidit\u00e4t bewahren**: Halten Sie einen Teil Ihres Portfolios in liquiden Mitteln, um in der Lage zu sein, bei Marktver\u00e4nderungen flexibel zu reagieren oder Chancen zu nutzen, ohne in finanzielle Bedr\u00e4ngnis zu geraten.\n\n6. **Langfristige Perspektive**: Ein langfristiger Anlagehorizont kann helfen, kurzfristige Marktschwankungen auszublenden und von der langfristigen Wachstumsdynamik der M\u00e4rkte zu profitieren.\n\n7. **Risikobewertung und Risikomanagement**: Bevor Sie investieren, bewerten Sie Ihr Risikoprofil und stellen Sie sicher, dass Ihre Anlagen Ihrem Risikoappetit entsprechen. Nutzen Sie Strategien wie Stop-Loss-Orders, um Verluste zu begrenzen.\n\n8. **Nachhaltigkeit ber\u00fccksichtigen**: Nachhaltige oder ESG-Investitionen (Umwelt, Soziales und Unternehmensf\u00fchrung) k\u00f6nnen auf lange Sicht stabile Renditen bieten und gleichzeitig mit Ihren pers\u00f6nlichen Werten im Einklang stehen.\n\n9. **Regelm\u00e4\u00dfige \u00dcberpr\u00fcfung und Anpassung**: \u00dcberpr\u00fcfen Sie regelm\u00e4\u00dfig Ihr Portfolio und passen Sie es an ver\u00e4nderte Marktbedingungen und pers\u00f6nliche Lebensumst\u00e4nde an.\n\n10. **Bildung und Information**: Informieren Sie sich kontinuierlich \u00fcber wirtschaftliche Trends und Entwicklungen, um fundierte Entscheidungen treffen zu k\u00f6nnen.\n\nDiese Strategien k\u00f6nnen helfen, eine Balance zwischen vorsichtiger Sparsamkeit und der Suche nach renditebringenden Gelegenheiten zu finden."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 3,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

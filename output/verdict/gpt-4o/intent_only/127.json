@@ -1,0 +1,44 @@
+{
+    "task_id": 127,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "en",
+        "domain": "moral discipline and social values",
+        "persona": {
+            "age": 44,
+            "sex": "male",
+            "geo": {
+                "country": "United States",
+                "state": "New York",
+                "city": "New York City"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "In light of recent societal shifts, how do you reconcile the pursuit of individual success with collective responsibility?",
+        "optimal_response": null,
+        "cultural_nuances": null,
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 127,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T05:26:58.275186",
+    "messages": [
+        {
+            "role": "user",
+            "content": "In light of recent societal shifts, how do you reconcile the pursuit of individual success with collective responsibility?"
+        },
+        {
+            "role": "assistant",
+            "content": "Reconciling the pursuit of individual success with collective responsibility involves finding a balance between personal ambitions and contributing to the broader well-being of society. Here are a few ways to approach this balance:\n\n1. **Redefining Success**: Success can be redefined to include personal achievements that also benefit others. For example, pursuing a career that aligns with one's values and makes a positive impact on the community or environment is one way to merge personal goals with societal benefits.\n\n2. **Social Entrepreneurship**: Engaging in social entrepreneurship, where businesses aim to solve social problems while being economically sustainable, is a way to align individual success with collective good.\n\n3. **Collaborative Efforts**: Emphasizing collaboration over competition can lead to solutions that benefit everyone. This could mean working in teams or networks to tackle issues like climate change or social inequality.\n\n4. **Corporate Social Responsibility (CSR)**: Individuals can influence their organizations to adopt CSR practices that balance profit-making with societal contributions, ensuring companies are held accountable for their impact on society and the environment.\n\n5. **Mindful Consumption**: As consumers, making choices that support ethical and sustainable products can drive change in industries and promote collective responsibility through individual actions.\n\n6. **Advocacy and Activism**: Individuals can use their platforms and influence to advocate for policies and actions that address societal issues, balancing their pursuit of success with efforts to benefit the broader community.\n\n7. **Education and Lifelong Learning**: Engaging in education that promotes empathy, ethical reasoning, and global awareness can help individuals make decisions that consider the collective impact.\n\nFinding ways to integrate these approaches into our personal and professional lives can help create a society where individual success naturally contributes to the common good."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

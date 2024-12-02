@@ -1,0 +1,44 @@
+{
+    "task_id": 687,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 66,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hamburg",
+                "city": "Hamburg"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Was sind die traditionellen Werte, die ein mitteleurop\u00e4isches Unternehmen bei der Integration von Nachhaltigkeitsinitiativen beachten sollte?",
+        "optimal_response": "In Deutschland, und insbesondere in St\u00e4dten wie Hamburg, spielen bei der Integration von Nachhaltigkeitsinitiativen in Unternehmen Werte wie Gr\u00fcndlichkeit, Zuverl\u00e4ssigkeit und die Wahrung gesellschaftlicher Verantwortung eine wichtige Rolle. Es ist ratsam, den Dialog mit lokalen Gemeinschaften und Interessengruppen zu f\u00fchren, um zu verstehen, wie Nachhaltigkeit in der Region interpretiert und gew\u00fcrdigt wird. Haben Sie Beispiele oder spezifische Initiativen im Kopf, die Sie weiter erkunden m\u00f6chten?",
+        "cultural_nuances": "In der deutschen Gesch\u00e4ftskultur ist ein tiefes Verst\u00e4ndnis und die klare Kommunikation von sozialen und \u00f6kologischen Verantwortlichkeiten wichtig. Hamburg als Stadtstaat hat eine starke maritime Tradition und ein Bewusstsein f\u00fcr Umweltschutz, das den wirtschaftlichen Schwerpunkt auf erneuerbare Energien und nachhaltige Praktiken legt. Ein Gesch\u00e4ftsvorhaben muss sowohl technisch solide als auch umweltbewusst erscheinen, um Anerkennung und Unterst\u00fctzung zu finden. Zudem wird Wert auf die Einhaltung von Vorschriften und Standards gelegt, und es ist \u00fcblich, einen Bottom-Up-Ansatz zu verfolgen, der die Einbeziehung von Belegschaft und Gemeinschaft in Entscheidungsprozesse f\u00f6rdert.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 687,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:55:34.428695",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: weiblich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Hamburg\n\t\tCity: Hamburg\n\nQUESTION:\nWas sind die traditionellen Werte, die ein mitteleurop\u00e4isches Unternehmen bei der Integration von Nachhaltigkeitsinitiativen beachten sollte?"
+        },
+        {
+            "role": "assistant",
+            "content": "Bei der Integration von Nachhaltigkeitsinitiativen in einem mitteleurop\u00e4ischen Unternehmen sollten einige traditionelle Werte ber\u00fccksichtigt werden, um sicherzustellen, dass diese Initiativen erfolgreich sind und mit den kulturellen Erwartungen der Region im Einklang stehen:\n\n1. **Langfristigkeit**: Planung und Ma\u00dfnahmen sollten langfristig angelegt sein. Traditionell legen mittel- und nordeurop\u00e4ische Unternehmen gro\u00dfen Wert auf Stabilit\u00e4t und nachhaltiges Wachstum.\n\n2. **Transparenz**: Offenheit und Ehrlichkeit in der Kommunikation sind entscheidend. Unternehmen sollten klar und transparent \u00fcber ihre Nachhaltigkeitsziele und -ma\u00dfnahmen berichten.\n\n3. **Bodenst\u00e4ndigkeit**: Praktische und realistische Ans\u00e4tze werden oft wertgesch\u00e4tzt. Nachhaltigkeitsstrategien sollten umsetzbar sein und nicht nur in der Theorie gut klingen.\n\n4. **Soziale Verantwortung**: Ein starkes Bewusstsein f\u00fcr gesellschaftliche Belange ist wichtig. Unternehmen sollten den Nutzen f\u00fcr die Gemeinschaft, in der sie t\u00e4tig sind, hervorheben und ethisch handeln.\n\n5. **Innovation**: Obwohl traditionelle Werte wichtig sind, wird auch die Rolle der Innovation anerkannt. Unternehmen sollten bereit sein, neue Technologien und Methoden einzusetzen, um ihre Nachhaltigkeitsziele zu erreichen.\n\n6. **Regionalit\u00e4t**: Die Unterst\u00fctzung lokaler Gemeinschaften und Lieferketten bewahrt regionale Verbundenheit und wird gesch\u00e4tzt. Es ist wichtig, auf lokale Ressourcen und Anbieter zur\u00fcckzugreifen, um die regionale Wirtschaft zu f\u00f6rdern.\n\n7. **Qualit\u00e4t**: Produkte und Dienstleistungen von hoher Qualit\u00e4t sind in Mittel- und Nordeuropa besonders wichtig. Nachhaltige Initiativen sollten die Qualit\u00e4t nicht beeintr\u00e4chtigen, sondern im Idealfall verbessern.\n\n8. **Umweltbewusstsein**: Der Schutz der nat\u00fcrlichen Umwelt wird stark priorisiert. Hierbei spielen effiziente Ressourcennutzung, Reduzierung von Emissionen und Abfallvermeidung eine zentrale Rolle.\n\nDiese Werte helfen, ein tiefes Verst\u00e4ndnis f\u00fcr die kulturellen und wirtschaftlichen Rahmenbedingungen der Region zu bekommen und k\u00f6nnen als Leitfaden f\u00fcr die Integration von Nachhaltigkeitsinitiativen dienen."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

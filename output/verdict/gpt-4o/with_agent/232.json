@@ -1,0 +1,48 @@
+{
+    "task_id": 232,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2text",
+        "lang": "en",
+        "domain": "religion",
+        "persona": {
+            "age": 44,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "New York",
+                "city": "New York City"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Could you tell me what one might traditionally serve on a table for a Sunday brunch after a church service in the South?",
+        "optimal_response": "In the Southern United States, a traditional Sunday brunch following a church service might include dishes like fried chicken, biscuits and gravy, grits, and collard greens. Desserts such as peach cobbler and sweet tea are also quite popular. Would you like more details about any of these dishes or their significance?",
+        "cultural_nuances": "Understanding Southern culture in the United States is crucial here. While the persona is from New York, they might have an interest in or connection to Southern traditions. Southern cuisine is often intertwined with hospitality, family gatherings, and religious traditions. Sunday brunches after church services are a time-honored tradition in the South, where communal meals are a way to both relax and socialize after religious services. Dishes mentioned carry cultural significance, often linked with family recipes and regional pride. The response needs to acknowledge these traditions respectfully and invite further exploration, recognizing that food is a key aspect of cultural identity.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 232,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:17.736662",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Could you tell me what one might traditionally serve on a table for a Sunday brunch after a church service in the South?"
+        },
+        {
+            "role": "assistant",
+            "content": "In the Southern United States, Sunday brunch often features a delightful array of traditional dishes. Here are some common items you might find on a table during a Southern Sunday brunch:\n\n1. **Biscuits and Gravy** - Flaky biscuits smothered in rich sausage gravy.\n2. **Grits** - Creamy, cheesy grits, often served alongside shrimp or as a base for other dishes.\n3. **Fried Chicken** - Crispy, golden-brown fried chicken, a Southern staple.\n4. **Pecan Pie** - A sweet dessert made with pecans, sugar, and syrup, often served in slices.\n5. **Quiche** - A savory custard pie filled with various ingredients like cheese, vegetables, and meats.\n6. **Deviled Eggs** - Hard-boiled eggs filled with a creamy yolk mixture, often seasoned with mustard and paprika.\n7. **Fresh Fruit** - A variety of seasonal fruits, such as peaches, berries, or melon, often displayed beautifully.\n8. **Cornbread** - A sweet or savory bread made from cornmeal, often served warm with butter.\n9. **Sweet Tea** - A quintessential Southern beverage, served chilled and sweetened.\n10. **Coffee and Juice** - A selection of caffeinated beverages and fresh juices to accommodate guests.\n\nThese dishes embody the warmth and hospitality of Southern culture and create a comforting and festive atmosphere for brunch gatherings."
+        },
+        {
+            "role": "assistant",
+            "content": "TERMINATE"
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 3,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

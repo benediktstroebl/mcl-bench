@@ -1,0 +1,46 @@
+{
+    "task_id": 596,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Religion",
+        "persona": {
+            "age": 66,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Bayern",
+                "city": "M\u00fcnchen"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "K\u00f6nntest du mir ein Bild erstellen, das einer traditionellen bayerischen Fronleichnamsprozession nachempfunden ist, das die Bedeutung dieser Feier f\u00fcr die lokale katholische Gemeinschaft hervorhebt?",
+        "optimal_response": "Nat\u00fcrlich, ich kann ein Bild erstellen, das die Fronleichnamsprozession in Bayern einf\u00e4ngt. Typischerweise w\u00fcrde es festlich geschm\u00fcckte Stra\u00dfen zeigen, mit Menschen, die traditionelle Trachten tragen und Heiligefiguren durch die Stadt tragen. Die Beteiligung der \u00f6rtlichen Gemeinschaft und die spirituelle Bedeutung als Akt der \u00f6ffentlichen Ehrung des Altarsakraments sind zentral. M\u00f6chtest du besondere Elemente oder Farben, die hervorgehoben werden sollen?",
+        "cultural_nuances": "In Bayern hat die Fronleichnamsprozession eine tief religi\u00f6se und kulturelle Bedeutung, die \u00fcber die religi\u00f6se Feier hinausgeht und eng mit regionalen Traditionen verbunden ist. Die Prozession ist ein lebendiger Ausdruck des Glaubens, bei dem lokale Br\u00e4uche, wie das Tragen traditioneller Trachten und das Dekorieren der Stra\u00dfenz\u00fcge, eine Rolle spielen. Ein Verst\u00e4ndnis dieser lokalen und religi\u00f6sen Traditionen ist entscheidend, um die Feier vollst\u00e4ndig und respektvoll darzustellen. Hinzu kommt, dass das Ereignis von Gemeinschaftsgef\u00fchl und der Bedeutung der katholischen Kirche in der Region gepr\u00e4gt ist.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 596,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:54:07.282619",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: weiblich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Bayern\n\t\tCity: M\u00fcnchen\n\nQUESTION:\nK\u00f6nntest du mir ein Bild erstellen, das einer traditionellen bayerischen Fronleichnamsprozession nachempfunden ist, das die Bedeutung dieser Feier f\u00fcr die lokale katholische Gemeinschaft hervorhebt?"
+        },
+        {
+            "role": "assistant",
+            "content": "IMAGE_ee5adf3f-faca-4677-a478-3a6b25ccaede.png"
+        }
+    ],
+    "image_files": [
+        "IMAGE_ee5adf3f-faca-4677-a478-3a6b25ccaede.png"
+    ],
+    "faithfulness": 5,
+    "stereotypicality": 5,
+    "helpfulness": 5
+}

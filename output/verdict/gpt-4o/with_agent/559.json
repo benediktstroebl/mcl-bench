@@ -1,0 +1,50 @@
+{
+    "task_id": 559,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 25,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hessen",
+                "city": "Frankfurt am Main"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Ich habe \u00fcber die traditionelle Handwerkskunst in der deutschen Wirtschaft gelesen, besonders im Hinblick auf den ber\u00fchmten Frankfurter Weihnachtsmarkt. Kannst du mir eine visuelle Darstellung dieser Handwerksprodukte geben, die die typischen kulturellen Merkmale und die wirtschaftliche Bedeutung hervorheben?",
+        "optimal_response": "Hier ist eine visuelle Darstellung einiger traditioneller Handwerksprodukte vom Frankfurter Weihnachtsmarkt, wie die kunstvoll geschnitzten Holzfiguren, handgefertigten Weihnachtsschmuck und die ber\u00fchmten Frankfurter Kranzkuchen. Diese Produkte spiegeln nicht nur gekonntes Handwerk wider, sondern sind auch ein wesentlicher Bestandteil der lokalen Wirtschaft, indem sie Touristen anziehen und zur Feststimmung beitragen. Gibt es ein spezifisches Produkt, das dich besonders interessiert? Ich kann dir gerne mehr Informationen dazu geben.",
+        "cultural_nuances": "Die Absicht bezieht sich auf den Frankfurter Weihnachtsmarkt, ein kulturell und wirtschaftlich bedeutendes Ereignis in Deutschland, das lokale Traditionen bewahrt und der Stadt Frankfurt wirtschaftlichen Nutzen bringt. Das Verst\u00e4ndnis der kulturellen Bedeutung und wirtschaftlichen Auswirkungen von handgefertigten Produkten, die auf dem Markt verkauft werden, erfordert Kenntnisse \u00fcber deutsche Handwerkskunst und regionalen Traditionen. In dieser Umgebung sind solche Produkte nicht nur als wirtschaftliche G\u00fcter, sondern auch als kulturelle Symbole von Bedeutung. Ein Chatbot sollte die F\u00e4higkeit besitzen, die historische und kulturelle Relevanz der Produkte sowie die Erfahrungen, die den Marktbesuch bereichern, in die Antwort einzugliedern.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 559,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:55:07.672795",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Ich habe \u00fcber die traditionelle Handwerkskunst in der deutschen Wirtschaft gelesen, besonders im Hinblick auf den ber\u00fchmten Frankfurter Weihnachtsmarkt. Kannst du mir eine visuelle Darstellung dieser Handwerksprodukte geben, die die typischen kulturellen Merkmale und die wirtschaftliche Bedeutung hervorheben?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A vibrant illustration showcasing traditional German handicrafts from the Frankfurt Christmas Market. Elements to include: intricately crafted wooden toys, hand-blown glass ornaments, embroidered textiles, and ceramic figurines. The background features festive market stalls adorned with lights and Christmas decorations, capturing the cultural essence of the holiday season in Germany. Emphasize the craftsmanship and unique characteristics of these products, with a hint of the bustling market atmosphere.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "Hier ist die visuelle Darstellung traditioneller Handwerksprodukte, die typischen kulturellen Merkmale und die wirtschaftliche Bedeutung des Frankfurter Weihnachtsmarkts hervorhebt. \n\n![Traditionelle Handwerkskunst auf dem Frankfurter Weihnachtsmarkt](attachment://IMAGE_a46894b7-2eb7-44f9-85d4-e57dd180e384.png)\n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_a46894b7-2eb7-44f9-85d4-e57dd180e384.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 4,
+    "helpfulness": 3
+}

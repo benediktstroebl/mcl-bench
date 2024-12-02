@@ -1,0 +1,50 @@
+{
+    "task_id": 566,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 66,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Bayern",
+                "city": "M\u00fcnchen"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Wie k\u00f6nnte ich ein Bild erstellen, das das Gef\u00fchl von bayerischer Stabilit\u00e4t und Innovation in der Unternehmensf\u00fchrung einf\u00e4ngt, vielleicht durch traditionelle Symbole und moderne Elemente vereint?",
+        "optimal_response": "Um ein solches Bild zu erstellen, k\u00f6nnten Sie traditionelle bayerische Symbole wie das Edelwei\u00df oder die bayerischen Alpen mit moderner Architektur und Technologie, wie etwa Windkraftanlagen oder innovative B\u00fcrogeb\u00e4ude, kombinieren. Denken Sie dabei an die typischen Farben Blau und Wei\u00df f\u00fcr einen regionalen Touch und an visuelle Elemente, die Sicherheit und Fortschritt vermitteln. W\u00e4re es hilfreich, auch auf soziale Aspekte und das starke Gemeinschaftsgef\u00fchl der Region einzugehen?",
+        "cultural_nuances": "In Bayern wird gro\u00dfen Wert auf Tradition und regionale Identit\u00e4t gelegt, was durch Symbole wie das bayerische Rautenmuster oder das Edelwei\u00df illustriert werden kann. Gleichzeitig ist Bayern ein wirtschaftlich starkes und innovatives Bundesland, das Wert auf Fortschritt legt. Das Bild sollte diese Balance einfangen. Wichtig ist auch das starke Gemeinschaftsgef\u00fchl und das regionale Stolz, die im Gesch\u00e4ftsleben oft durch famili\u00e4re Strukturen und langfristige lokale Partnerschaften widergespiegelt werden. Ein Verst\u00e4ndnis f\u00fcr diese Dualit\u00e4t ist entscheidend, um ein authentisches und ansprechendes Bild zu gestalten.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 566,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:51:21.175753",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Wie k\u00f6nnte ich ein Bild erstellen, das das Gef\u00fchl von bayerischer Stabilit\u00e4t und Innovation in der Unternehmensf\u00fchrung einf\u00e4ngt, vielleicht durch traditionelle Symbole und moderne Elemente vereint?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A conceptual image representing Bavarian stability and innovation in business management. The image should blend traditional Bavarian symbols, such as the blue and white checkered pattern, a pretzel, and the iconic Neuschwanstein Castle, with modern elements like digital interfaces, graphs, and futuristic buildings. The overall atmosphere should evoke a sense of harmony between tradition and progress.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "Das Bild, das das Gef\u00fchl von bayerischer Stabilit\u00e4t und Innovation in der Unternehmensf\u00fchrung einf\u00e4ngt, wurde erfolgreich erstellt. [Hier ist das Bild](sandbox:/IMAGE_fda4a8ee-f447-46d6-a152-d280c4919af1.png). \n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_fda4a8ee-f447-46d6-a152-d280c4919af1.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 3,
+    "helpfulness": 4
+}

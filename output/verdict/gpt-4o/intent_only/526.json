@@ -1,0 +1,46 @@
+{
+    "task_id": 526,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Bildung",
+        "persona": {
+            "age": 25,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Bayern",
+                "city": "M\u00fcnchen"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "K\u00f6nnten Sie ein Bild generieren, das die Bedeutung der 'Gem\u00fctlichkeit' in einem bayerischen Klassenzimmer zeigt?",
+        "optimal_response": "Das Bild zeigt einen Raum mit traditionell bayerischer Einrichtung: dunkle Holzm\u00f6bel, warme Farben, und in der Ecke steht ein Kachelofen. Die Sch\u00fcler sitzen auf Hockern um einen gro\u00dfen Tisch, w\u00e4hrend eine Lehrerin in Tracht ein Buch vorliest. Im Hintergrund sind die Alpen durch das Fenster sichtbar, und es gibt eine h\u00f6lzerne Wandtafel. Eine R\u00fcckfrage w\u00e4re: Gibt es bestimmte Elemente der bayerischen Kultur, die im Klassenzimmer betont werden sollen?",
+        "cultural_nuances": "Der Begriff 'Gem\u00fctlichkeit' hat in Bayern eine tief verwurzelte kulturelle Bedeutung, die \u00fcber einfache Behaglichkeit oder Komfort hinausgeht. Es umfasst ein Gef\u00fchl von W\u00e4rme, Geborgenheit und Gemeinschaftsgef\u00fchl. Im Bildungskontext k\u00f6nnte es eine Lernumgebung beschreiben, die sowohl physisch als auch emotional angenehm ist. Der Chatbot muss diese Nuancen verstehen und visuell darstellen k\u00f6nnen, wie Tradition und Kultur die Lernatmosph\u00e4re beeinflussen k\u00f6nnen. Dar\u00fcber hinaus sollte das Bild subtile Anspielungen auf regionale Traditionen machen, wie z.B. Trachten oder spezifische Architekturstile, um die kulturelle Tiefe zu bewahren.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 526,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:47:31.666752",
+    "messages": [
+        {
+            "role": "user",
+            "content": "K\u00f6nnten Sie ein Bild generieren, das die Bedeutung der 'Gem\u00fctlichkeit' in einem bayerischen Klassenzimmer zeigt?"
+        },
+        {
+            "role": "assistant",
+            "content": "IMAGE_dc5f5422-13cf-456d-833a-44588eeb51c1.png"
+        }
+    ],
+    "image_files": [
+        "IMAGE_dc5f5422-13cf-456d-833a-44588eeb51c1.png"
+    ],
+    "faithfulness": 5,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}
