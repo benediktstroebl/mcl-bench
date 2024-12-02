@@ -1,6 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Literal, List, Dict, Optional
+from dataclasses import dataclass, field, asdict, fields
+from typing import Literal, List, Dict, Optional, Any
 from itertools import product
+import os
+import json
+
 
 from helpers import load_yaml, printv
 
@@ -28,6 +31,7 @@ class Persona:
     sex: str
     geo: Geo
     political_leaning: Optional[Literal['conservative', 'liberal']] = None
+    lang: str = field(default=None)
 
     def __post_init__(self):
         pass 
@@ -38,10 +42,10 @@ class Persona:
         return (
             f"\n\tAge: {self.age}"
             f"\n\tSex: {self.sex}"
-            f"\n\tGeographic information:\n{self.geo.generate_prompt()}"
-            f"\n\tPolitical leaning: {self.political_leaning}"
+            f"\n\tLanguage: {self.lang}"
+            f"\n\tNationality:\n{self.geo.generate_prompt()}"
+            # f"\n\tPolitical leaning: {self.political_leaning}"
         )
-
 
 @dataclass
 class Task:
@@ -53,8 +57,20 @@ class Task:
     external_files: List[str] = field(default_factory=list)
     internal_system_prompt: str = field(default=None)
     external_system_prompt: str = field(default=None)
+    task_id: Optional[int] = field(default=None)
+
+    # Class variable for task ID counter
+    _id_counter: int = 0
 
     def __post_init__(self):
+        if self.task_id is None:
+            type(self)._id_counter += 1
+            self.task_id = type(self)._id_counter
+        else:
+            # When loading from JSON, task_id is provided
+            # Update the counter if necessary
+            if self.task_id > type(self)._id_counter:
+                type(self)._id_counter = self.task_id
         if self.modality == 'image2image':
             raise NotImplementedError("image2image modality is not supported yet")
 
@@ -70,7 +86,7 @@ class Task:
             f"{self.internal_system_prompt}"
             f"Modality: {self.modality}\n"
             f"Domain: {self.domain}\n"
-            f"Persona: {self.persona.generate_prompt()}"
+            f"Personal details: {self.persona.generate_prompt()}"
         )
         return prompt
 
@@ -91,6 +107,7 @@ class Task:
         )
         return prompt
 
+
 @dataclass
 class PromptProtocol:
     langs: List[str] = field(default_factory=lambda: ['en', 'ru', 'de'])
@@ -99,7 +116,7 @@ class PromptProtocol:
 
     # Task parameters
     modalities: List[Literal['text2image', 'image2text', 'text2text']] = field(
-        default_factory=lambda: ['text2image', 'image2text', 'text2text']
+        default_factory=lambda: ['text2image', 'text2text']
     )
 
     # Persona parameters
@@ -130,7 +147,7 @@ class PromptProtocol:
         domains = data.get("Domains", [])
         persona_data = data.get("Persona", {})
         sexes = persona_data.get("sex", ['unspecified'])
-        political_leanings = persona_data.get("political_leaning", [None])
+        # political_leanings = persona_data.get("political_leaning", [None])
         ages = self.age_list
 
         geo_combinations = [
@@ -141,14 +158,14 @@ class PromptProtocol:
         ]
 
         modalities = self.modalities
-        combinations = product(modalities, domains, sexes, ages, political_leanings, geo_combinations)
+        combinations = product(modalities, domains, sexes, ages, geo_combinations)
         result = []
 
-        for modality, domain, sex, age, pl, geo in combinations:
+        for modality, domain, sex, age, geo in combinations:
             # Create Geo object
             geo_obj = Geo(country=geo[0], state=geo[1], city=geo[2])
             # Create Persona object
-            persona_obj = Persona(age=age, sex=sex, geo=geo_obj, political_leaning=pl)
+            persona_obj = Persona(age=age, sex=sex, geo=geo_obj, lang=lang)
             # Create Task object
             task_obj = Task(
                 modality=modality,
@@ -162,15 +179,91 @@ class PromptProtocol:
 
         return result
 
+    def save_tasks(self, output_dir: str = 'data/tasks'):
+        """
+        Save the country_specific_dict to JSON files, one per language.
+
+        Args:
+            output_dir (str): The directory where the task files will be saved.
+                              Defaults to 'data/tasks'.
+        """
+
+        os.makedirs(output_dir, exist_ok=True)
+        for lang, tasks in self.country_specific_dict.items():
+            data_to_save = [asdict(task) for task in tasks]
+            file_path = os.path.join(output_dir, f'{lang}_tasks.json')
+            try:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+                printv(f"Tasks for language '{lang}' saved to '{file_path}'", verbosity=self.verbosity)
+            except IOError as e:
+                printv(f"Failed to save tasks for language '{lang}' to '{file_path}': {e}", verbosity=self.verbosity)
+
+
+    def load_tasks(self, input_dir: str = 'data/tasks'):
+        """
+        Load the tasks from JSON files back into the country_specific_dict.
+
+        Args:
+            input_dir (str): The directory from where the task files will be loaded.
+                             Defaults to 'data/tasks'.
+        """
+        for lang in self.langs:
+            file_path = os.path.join(input_dir, f'{lang}_tasks.json')
+            if not os.path.exists(file_path):
+                printv(f"No task file found for language '{lang}' at '{file_path}'", verbosity=self.verbosity)
+                continue
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data_loaded = json.load(f)
+                tasks = [self._dict_to_task(task_dict) for task_dict in data_loaded]
+                self.country_specific_dict[lang] = tasks
+                printv(f"Tasks for language '{lang}' loaded from '{file_path}'", verbosity=self.verbosity)
+            except (IOError, json.JSONDecodeError) as e:
+                printv(f"Failed to load tasks for language '{lang}' from '{file_path}': {e}", verbosity=self.verbosity)
+
+    def _dict_to_task(self, data: Dict[str, Any]) -> Task:
+        """
+        Helper method to convert a dictionary back into a Task dataclass instance.
+
+        Args:
+            data (Dict[str, Any]): The dictionary representation of the Task.
+
+        Returns:
+            Task: The reconstructed Task instance.
+        """
+        # Reconstruct Geo object
+        geo_data = data['persona']['geo']
+        geo_obj = Geo(**geo_data)
+
+        # Reconstruct Persona object
+        persona_data = data['persona']
+        persona_data['geo'] = geo_obj
+        persona_obj = Persona(**persona_data)
+
+        # Reconstruct Task object
+        data['persona'] = persona_obj
+        task_fields = {field.name for field in fields(Task)}
+        task_init_data = {key: data[key] for key in data if key in task_fields}
+        task_obj = Task(**task_init_data)
+
+        return task_obj
+    
 
 def main():
     pp = PromptProtocol(verbosity=1)
+    pp.save_tasks()
     tasks = pp.country_specific_dict['ru']
     print(f"Total tasks generated: {len(tasks)}")
     sample_tasks = tasks[:3]
     for task in sample_tasks:
+        print(f"Task ID: {task.task_id}")
         print(task.prompt_intent_generation())
         print()
+
+    pp.load_tasks()
+    tasks = pp.country_specific_dict['ru']
+    print(f"Total tasks loaded: {len(tasks)}")
 
 
 if __name__ == "__main__":
