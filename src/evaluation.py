@@ -4,15 +4,37 @@ from typing import List, Dict, Optional
 from dataclasses import asdict
 import asyncio
 from pathlib import Path
+from datetime import datetime
 
 from tasks import Task, Persona, Geo
 from agent import run_agent_evaluation
 from litellm import completion
+from prompts.persona_context import get_persona_context_prompt
 
 class EvaluationPipeline:
-    def __init__(self, output_dir: str = "output"):
-        self.output_dir = output_dir
-        Path(output_dir).mkdir(parents=True, exist_ok=True)
+    def __init__(self, output_dir: str = "output", model: str = "gpt-4o-mini"):
+        self.base_dir = output_dir
+        self.model = model
+        self._setup_directories()
+
+    def _setup_directories(self):
+        """Create directory structure for results."""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.output_dir = Path(self.base_dir) / self.model / timestamp
+        
+        # Create directories for each evaluation setting
+        self.intent_dir = self.output_dir / "intent_only"
+        self.persona_dir = self.output_dir / "with_persona"
+        self.agent_dir = self.output_dir / "with_agent"
+
+        for dir_path in [self.intent_dir, self.persona_dir, self.agent_dir]:
+            dir_path.mkdir(parents=True, exist_ok=True)
+
+    def _generate_filename(self, task: Task) -> str:
+        """Generate a unique filename for the task result."""
+        # Create a short identifier from task properties
+        task_id = f"{task.domain}_{task.modality}_{task.lang}"
+        return f"{task_id}.json"
 
     def evaluate_intent_only(self, task: Task) -> List[Dict]:
         """Setting 1: Evaluate with just the intent."""
@@ -23,19 +45,34 @@ class EvaluationPipeline:
         response = self._get_model_response(messages)
         messages.append({"role": "assistant", "content": response})
         
-        self._save_results("intent_only.jsonl", messages, task)
+        self._save_result(self.intent_dir, task, messages)
         return messages
 
     def evaluate_with_persona(self, task: Task, exclude_attributes: Optional[List[str]] = None) -> List[Dict]:
         """Setting 2: Evaluate with intent and persona context."""
-        # Filter out excluded attributes from persona
-        persona_dict = asdict(task.persona)
+        # Filter out excluded attributes from persona if specified
         if exclude_attributes:
+            # Create a copy of the persona to avoid modifying the original
+            persona_dict = asdict(task.persona)
             for attr in exclude_attributes:
                 if attr in persona_dict:
                     del persona_dict[attr]
+            # Recreate persona object with filtered attributes
+            # First recreate the Geo object
+            geo_data = persona_dict.get('geo')
+            geo = Geo(**geo_data) if geo_data else task.persona.geo
+            # Then create the Persona with the proper Geo object
+            filtered_persona = Persona(
+                age=persona_dict.get('age', task.persona.age),
+                sex=persona_dict.get('sex', task.persona.sex),
+                geo=geo,
+                political_leaning=persona_dict.get('political_leaning', task.persona.political_leaning)
+            )
+        else:
+            filtered_persona = task.persona
 
-        context = f"Given the following persona:\n{task.persona.generate_prompt()}\n\nRespond to: {task.intent}"
+        # Get the formatted prompt from the prompt template
+        context = get_persona_context_prompt(filtered_persona, task.intent)
         
         messages = [
             {"role": "user", "content": context}
@@ -44,32 +81,37 @@ class EvaluationPipeline:
         response = self._get_model_response(messages)
         messages.append({"role": "assistant", "content": response})
         
-        self._save_results("with_persona.jsonl", messages, task)
+        self._save_result(self.persona_dir, task, messages)
         return messages
 
     async def evaluate_with_agent(self, task: Task) -> List[Dict]:
         """Setting 3: Evaluate using the agent with user interaction."""
         messages = await run_agent_evaluation(task)
-        self._save_results("with_agent.jsonl", messages, task)
+        self._save_result(self.agent_dir, task, messages)
         return messages
 
     def _get_model_response(self, messages: List[Dict]) -> str:
         """Get response from the model."""
         response = completion(
-            model="gpt-4o-mini",
+            model=self.model,
             messages=messages
         )
         return response.choices[0].message.content
 
-    def _save_results(self, filename: str, messages: List[Dict], task: Task):
-        """Save results to jsonl file."""
-        output_path = os.path.join(self.output_dir, filename)
-        with open(output_path, "a") as f:
-            result = {
-                "task": asdict(task),
-                "messages": messages
-            }
-            f.write(json.dumps(result) + "\n")
+    def _save_result(self, directory: Path, task: Task, messages: List[Dict]):
+        """Save result as a JSON file."""
+        filename = self._generate_filename(task)
+        output_path = directory / filename
+        
+        result = {
+            "task": asdict(task),
+            "model": self.model,
+            "timestamp": datetime.now().isoformat(),
+            "messages": messages
+        }
+        
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
 
 async def main():
     # Create a synthetic task for testing
@@ -87,12 +129,12 @@ async def main():
     )
 
     # Initialize evaluation pipeline
-    pipeline = EvaluationPipeline()
+    pipeline = EvaluationPipeline(model="gpt-4o-mini")
 
     # Run all three evaluation settings
     pipeline.evaluate_intent_only(task)
     pipeline.evaluate_with_persona(task, exclude_attributes=["political_leaning"])
-    # await pipeline.evaluate_with_agent(task)
+    await pipeline.evaluate_with_agent(task)
 
 if __name__ == "__main__":
     asyncio.run(main()) 
