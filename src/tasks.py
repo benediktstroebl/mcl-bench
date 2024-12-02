@@ -99,12 +99,7 @@ class Task:
             location=self.persona.geo.location_str(),
             question=self.intent
         )
-        prompt += (
-            f"Domain: {self.domain}\n"
-            f"Persona:\n{self.persona.generate_prompt()}\n"
-            f"Intent: {self.intent}\n"
-            f"Image file: {self.external_files}"
-        )
+ 
         return prompt
 
 
