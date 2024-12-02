@@ -4,13 +4,13 @@ Domains:
   - Bildung
   - Wirtschaft
   - Religion
-  - Gesundheit
-  - Sicherheit
-  - Ästhetik
-  - Kultur
+  # - Gesundheit
+  # - Sicherheit
+  # - Ästhetik
+  # - Kultur
 Persona:
   sex: [männlich, weiblich]
-  political_leaning: [konservativ, liberal]
+  # political_leaning: [konservativ, liberal]
 Geo:
   Deutschland:
     Bayern:

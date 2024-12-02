@@ -4,13 +4,13 @@ Domains:
   - education
   - economy
   - religion
-  - health
-  - security 
-  - aesthetics 
-  - culture 
+  # - health
+  # - security 
+  # - aesthetics 
+  # - culture 
 Persona:
   sex: [male, female]
-  political_leaning: [conservative, liberal]
+  # political_leaning: [conservative, liberal]
 Geo:
   United States:
     California:
