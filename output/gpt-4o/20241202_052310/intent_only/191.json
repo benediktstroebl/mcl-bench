@@ -1,0 +1,41 @@
+{
+  "task_id": 191,
+  "evaluation_type": "intent",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "economy",
+    "persona": {
+      "age": 66,
+      "sex": "male",
+      "geo": {
+        "country": "United States",
+        "state": "California",
+        "city": "San Francisco"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "How's the current economic climate affecting the tech industry and its workforce in our area?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 191,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:43:47.279595",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How's the current economic climate affecting the tech industry and its workforce in our area?"
+    },
+    {
+      "role": "assistant",
+      "content": "As of the latest data in 2023, the economic climate continues to impact the tech industry in various regions differently, though some common trends can be observed across the board.\n\n1. **Hiring Freezes and Layoffs**: Many tech companies have implemented hiring freezes or even layoffs as they try to navigate economic uncertainties. Factors such as rising inflation, fluctuating consumer demand, and global supply chain disruptions have led organizations to adjust their workforce plans to maintain financial stability.\n\n2. **Shift to Cost Efficiency**: Tech companies are increasingly focusing on cost efficiency and operational optimization. This shift has led to a re-prioritization of projects and, in some cases, scaling back on less profitable or non-essential services.\n\n3. **Remote and Hybrid Work Models**: The pandemic accelerated the adoption of remote work, and many tech companies continue to offer flexible work arrangements. This trend is helping to expand talent pools beyond traditional tech hubs, affecting the workforce dynamic in various regions.\n\n4. **Upskilling and Reskilling**: With rapidly changing technology and economic conditions, there is a strong emphasis on upskilling and reskilling the workforce to keep up with new tools and platforms. Many tech workers are proactively seeking training opportunities to stay competitive.\n\n5. **Venture Capital and Startups**: While large tech giants may face challenges, there is still significant venture capital investment in startups, especially in sectors like AI, cybersecurity, and green tech. However, startups need to demonstrate clearer paths to profitability to attract investment.\n\n6. **Regulatory Challenges**: Increased scrutiny and regulatory pressures in sectors like data privacy and antitrust can pose additional challenges, requiring companies to adapt strategically.\n\nFor a more localized view, it would be important to consider specific regional factors, such as the presence of major tech companies, local government policies, and unique economic conditions that could influence the tech workforce in your area. You might want to check local news sources, economic reports, or industry analyses for more detailed insights."
+    }
+  ],
+  "image_files": null
+}

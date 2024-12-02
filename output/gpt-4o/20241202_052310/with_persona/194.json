@@ -1,0 +1,41 @@
+{
+  "task_id": 194,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "economy",
+    "persona": {
+      "age": 66,
+      "sex": "male",
+      "geo": {
+        "country": "United States",
+        "state": "Florida",
+        "city": "Miami"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "I've been hearing about 'The American Dream' in the context of today's economy. Can you explain how this ideal relates to current economic conditions and personal finance strategies for retirees?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 194,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:27:18.626004",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: male\n\tLanguage: en\n\tNationality:\n\t\tCountry: United States\n\t\tState: Florida\n\t\tCity: Miami\n\nQUESTION:\nI've been hearing about 'The American Dream' in the context of today's economy. Can you explain how this ideal relates to current economic conditions and personal finance strategies for retirees?"
+    },
+    {
+      "role": "assistant",
+      "content": "Certainly! The concept of \"The American Dream\" is built on the idea that anyone, regardless of their background, can achieve success and prosperity through hard work and determination. Traditionally, it includes owning a home, having a stable career, and being able to provide for oneself and one's family.\n\nIn today's economic context, the American Dream is evolving. Economic conditions such as income inequality, housing market fluctuations, and rising costs of living have made this ideal more challenging to achieve for many. However, it still holds significant meaning, especially as it adapts to the changing landscape.\n\nFor retirees, achieving or maintaining the American Dream often involves strategic financial planning to ensure a comfortable and sustainable lifestyle. Here are some personal finance strategies to consider:\n\n1. **Diversify Income Sources**: Look into multiple income streams beyond social security, such as pensions, part-time work, or investments, to maintain financial stability.\n\n2. **Manage Healthcare Costs**: With healthcare expenses often rising in retirement, it's crucial to plan for healthcare insurance and consider long-term care options.\n\n3. **Housing Considerations**: Evaluate your housing situation; downsizing or relocating to areas with a lower cost of living might be beneficial. Florida’s lack of a state income tax is a fiscal advantage in this context.\n\n4. **Estate Planning**: Ensure all your assets are organized in a manner that reflects your wishes, and consider consulting with a professional for setting up trusts or wills.\n\n5. **Stay Informed and Adaptive**: Economic conditions change, as do personal circumstances. Regularly update and revise your financial plans, adjusting for market conditions and personal needs.\n\n6. **Investment Strategy**: A balanced portfolio that accounts for both growth and security can safeguard against inflation and market volatility.\n\n7. **Community Engagement**: Engaging in local community activities can provide non-monetary fulfillment that enhances the quality of life during retirement.\n\nOverall, while today's economic landscape presents challenges, with careful planning and adaptation, retirees can still aspire to achieve their version of the American Dream. This often involves a shift from solely financial success to broader life satisfaction and security."
+    }
+  ],
+  "image_files": null
+}

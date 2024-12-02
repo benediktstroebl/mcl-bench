@@ -1,0 +1,41 @@
+{
+  "task_id": 207,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "economy",
+    "persona": {
+      "age": 66,
+      "sex": "female",
+      "geo": {
+        "country": "United States",
+        "state": "New York",
+        "city": "New York City"
+      },
+      "political_leaning": null,
+      "lang": "en"
+    },
+    "intent": "With the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?",
+    "optimal_response": null,
+    "cultural_nuances": null,
+    "external_files": [],
+    "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona’s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+    "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+    "task_id": 207,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T05:44:25.464098",
+  "messages": [
+    {
+      "role": "user",
+      "content": "With the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on your insights and concerns, here are some tailored strategies to enhance long-term financial stability while aligning with your cultural values:\n\n1. **Community Engagement**: \n   - **Financial Literacy Workshops**: Participate in or initiate financial literacy programs at local community centers that involve both seniors and younger generations. Not only does this promote knowledge sharing, but it also strengthens community ties.\n   - **Intergenerational Savings Clubs**: Start or join a savings club that includes members from different age groups, allowing sharing of financial practices and fostering collaborative learning regarding investments and savings.\n\n2. **Diversified Investments with Resilience**:\n   - **Stable Investment Options**: Focus on a mixed portfolio including bonds, dividend stocks, and real estate investments to ensure steady income—especially important for health and retirement funds.\n   - **Emergency Savings Fund**: Build or maintain an emergency fund that covers 6-12 months of living expenses, ensuring resilience against market fluctuations or personal emergencies.\n\n3. **Support Health and Well-Being**:\n   - **Health-Focused Savings Account (HSA)**: If you have health care costs, consider using HSAs to save pre-tax dollars specifically for medical expenses.\n   - **Community Health Programs**: Engage with local programs that promote physical activity and mental health among seniors, reinforcing the value placed on health in your community.\n\n4. **Promote Arts and Expression**:\n   - **Art and Financial Literacy**: Partner with local artists to create events that blend financial literacy with art, making learning engaging and culturally relevant. This could attract attention and participation from diverse community members.\n   - **Support Local Artists**: Invest in local art through community projects or initiatives that foster personal expression and also provide potential returns.\n\n5. **Emphasize Equality and Sustainability**:\n   - **Ethical Investing**: Consider incorporating socially responsible investments that focus on companies promoting social justice, equality, and sustainability.\n   - **Support Local Businesses**: Actively spend in local businesses run by diverse communities, which strengthens the local economy and promotes a sense of identity and support for fellow New Yorkers.\n\n6. **Leverage Available Resources**:\n   - **Utilize City Programs**: Take full advantage of programs offered through the City’s Department for the Aging for financial assistance or workshops that focus on specific concerns like property taxes.\n   - **Engage with Financial Advisors**: Seek guidance from community banks or credit unions that offer advice tailored to seniors, ensuring that your specific needs and concerns are well addressed.\n\nBy incorporating these strategies, not only can you enhance your financial security but also celebrate and strengthen the cultural values that define your community. Would you like to explore any specific aspect or strategy further? \n\nTERMINATE"
+    }
+  ],
+  "image_files": null
+}
