@@ -267,6 +267,13 @@ class PromptProtocol:
 
         return task_obj
     
+    def update_prompts(self, output_dir: str):
+        for lang, tasks in self.country_specific_dict.items():
+            for task in tasks:
+                task.internal_system_prompt = self.internal_system_prompts.get(lang, "")
+                task.external_system_prompt = self.external_system_prompts.get(lang, "")
+        self.save_tasks(output_dir)
+    
 
 def main():
     pp = PromptProtocol(verbosity=1)
@@ -279,8 +286,8 @@ def main():
         print(task.prompt_intent_generation())
         print()
 
-    pp.load_tasks()
-    tasks = pp.country_specific_dict['ru']
+    pp.load_tasks('data/tasks_with_intents/gpt-4o/')
+    pp.update_prompts('data/tasks_with_intents/gpt-4o/')
     print(f"Total tasks loaded: {len(tasks)}")
 
 
