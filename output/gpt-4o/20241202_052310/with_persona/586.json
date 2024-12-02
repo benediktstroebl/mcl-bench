@@ -1,0 +1,43 @@
+{
+  "task_id": 586,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2image",
+    "lang": "de",
+    "domain": "Religion",
+    "persona": {
+      "age": 25,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Bayern",
+        "city": "München"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Zeige mir ein Bild, das die Atmosphäre von Fronleichnam in Bayern einfängt.",
+    "optimal_response": "Hier ist eine Darstellung der Fronleichnamsprozession in Bayern, die die reich geschmückten Altäre, die Trachten der Teilnehmer und die bunten Blumenteppiche zeigt. Fronleichnam ist ein bedeutendes katholisches Fest in Bayern, das eine tiefe spirituelle Bedeutung hat und stark in der lokalen Kultur verwurzelt ist. Gibt es einen bestimmten Aspekt des Festes, den du näher erkunden möchtest?",
+    "cultural_nuances": "Fronleichnam ist ein katholisches Fest, das in Bayern besonders feierlich begangen wird. Die Prozessionen sind nicht nur religiöse, sondern auch kulturelle und soziale Ereignisse. Es ist wichtig, die Rolle der Kirche in der bayerischen Gesellschaft zu verstehen, sowie die Traditionen der prachtvollen Prozessionen und die damit verbundene Gemeinschaftsbeteiligung. Zudem sind die visuellen Elemente wie Blumenteppiche und Trachten emblematisch für die Region und tragen zur Atmosphäre des Festes bei. Kulturverständnis erfordert auch das Erkennen, dass Religion in Bayern eng mit regionaler Identität verknüpft ist.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 586,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:49:55.787448",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 25\n\tSex: weiblich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Bayern\n\t\tCity: München\n\nQUESTION:\nZeige mir ein Bild, das die Atmosphäre von Fronleichnam in Bayern einfängt."
+    },
+    {
+      "role": "assistant",
+      "content": "IMAGE_eeac960a-a4bc-40e9-97e3-7e8953b59db1.png"
+    }
+  ],
+  "image_files": [
+    "IMAGE_eeac960a-a4bc-40e9-97e3-7e8953b59db1.png"
+  ]
+}

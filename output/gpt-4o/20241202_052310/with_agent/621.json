@@ -1,0 +1,45 @@
+{
+  "task_id": 621,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 44,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Bayern",
+        "city": "München"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Was bedeutet für dich Heimat und wie beeinflusst sie deine moralischen Entscheidungen im täglichen Leben?",
+    "optimal_response": "Heimat kann für viele Menschen unterschiedliche Bedeutungen haben, besonders in Bayern, wo Traditionen und Bräuche stark in den Alltag integriert sind. Für mich verbindet sich Heimat mit Werten wie Zusammenhalt und Gemeinschaftssinn. Wie würdest du sagen, dass deine Vorstellung von Heimat deine Sicht auf moralische Fragen beeinflusst, besonders in einer Stadt wie München, wo es eine Mischung aus Tradition und Moderne gibt?",
+    "cultural_nuances": "In Bayern und speziell in München spielt der Begriff 'Heimat' eine besondere Rolle und hat einen tief verwurzelten kulturellen und emotionalen Wert. Heimat ist nicht nur ein geographischer Ort, sondern oft eng mit Bräuchen, Traditionen und gemeinschaftlichen Werten verbunden, die moralische Entscheidungen stark beeinflussen können. Zusätzlich ist München eine Metropole, die Traditionen mit einer modernen, weltoffenen Lebensweise verbindet, was das Verständnis von Heimat und Moral weiter nuanciert. Ein Chatbot muss diese feinen Unterschiede verstehen, um eine adäquate und empathische Antwort zu geben, insbesondere im Umgang mit Themen, die emotionale Bindungen und Werte betreffen.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 621,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:54:50.638649",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Was bedeutet für dich Heimat und wie beeinflusst sie deine moralischen Entscheidungen im täglichen Leben?"
+    },
+    {
+      "role": "assistant",
+      "content": "Heimat kann für jeden Menschen unterschiedlich sein, aber allgemein bezieht es sich auf einen Ort oder eine Gemeinschaft, mit der man sich emotional verbunden fühlt. Heimat kann die physische Umgebung sein, in der man aufgewachsen ist, oder ein kulturelles Umfeld, in dem man sich zugehörig fühlt. Diese Verbundenheit zu Heimat spielt eine zentrale Rolle in der Identität eines Menschen und kann tiefgreifende Auswirkungen auf seine moralischen Entscheidungen haben.\n\nHeimat beeinflusst moralische Entscheidungen auf verschiedene Weisen:\n\n1. **Werte und Traditionen:** Die Werte und Traditionen einer Gemeinschaft prägen oft, was als richtig oder falsch angesehen wird. Diese Werte können im täglichen Leben als Leitfaden dienen.\n\n2. **Gemeinschaftsgefühl:** Ein starkes Gefühl der Zugehörigkeit kann persönliche Entscheidungen fördern, die das Wohl der Gemeinschaft berücksichtigen. Menschen fühlen sich oft bereit, für das Gemeinwohl zu handeln und Verantwortung zu übernehmen.\n\n3. **Identität:** Heimat ist oft eng mit der eigenen Identität verbunden. Die Art und Weise, wie man über sich selbst und seine Herkunft denkt, kann das eigene Verhalten und die Entscheidungsfindung beeinflussen.\n\n4. **Erfahrungen und Erinnerungen:** Frühere Erfahrungen aus der Heimat können dazu führen, dass man bestimmte moralische Überzeugungen hat oder Entscheidungen in bestimmten Situationen trifft.\n\nInsgesamt spielt Heimat eine wichtige Rolle bei der Formung eines Menschen und seiner ethischen Überlegungen im Alltag. Sie kann sowohl als Quelle von Inspiration als auch von Herausforderungen dienen, die moralische Überzeugungen und Entscheidungen prägen."
+    },
+    {
+      "role": "assistant",
+      "content": "TERMINATE"
+    }
+  ],
+  "image_files": null
+}

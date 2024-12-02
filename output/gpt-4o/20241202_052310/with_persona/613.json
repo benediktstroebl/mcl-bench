@@ -1,0 +1,41 @@
+{
+  "task_id": 613,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 66,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Berlin",
+        "city": "Berlin"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Ist es heutzutage noch wichtig, dass man seine Kinder in strengen religiösen und moralischen Werten erzieht, oder kultiviert man eher Offenheit und Selbstbestimmung? Welche Rolle spielt dabei die Pflicht gegenüber der Gemeinschaft?",
+    "optimal_response": "In unserer heutigen Berliner Gesellschaft wird oft ein Gleichgewicht zwischen traditionellen Werten und der Förderung von Selbstbestimmung gesucht. Während viele Wert auf individuelle Freiheit legen, bleibt die Vorstellung von sozialer Verantwortung tief verwurzelt. Vielleicht könnte man fragen, wie man durch persönliche Entscheidungen gleichzeitig der Gemeinschaft nützen kann. Was denken Sie, welchen Einfluss hat die Geschichte der Stadt auf diese Balance zwischen Individualität und sozialer Pflicht?",
+    "cultural_nuances": "Berlin, geprägt durch eine bewegte Geschichte und als Schmelztiegel verschiedenster Kulturen, hat eine Kultur, die sowohl individuelle Autonomie als auch Gemeinschaftsverantwortung schätzt. Das historische Erbe der DDR und der kulturelle Mix tragen zu Sichtweisen bei, die sowohl persönliche Freiheit als auch soziale Pflichten berücksichtigen. Der Chatbot muss verstehen, dass diese Debatte stark mit historischen und gesellschaftlichen Entwicklungen verknüpft ist und dass dies mehr erfordert als nur eine simple Antwort über Erziehungsstile.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 613,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:51:18.501741",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: männlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Berlin\n\t\tCity: Berlin\n\nQUESTION:\nIst es heutzutage noch wichtig, dass man seine Kinder in strengen religiösen und moralischen Werten erzieht, oder kultiviert man eher Offenheit und Selbstbestimmung? Welche Rolle spielt dabei die Pflicht gegenüber der Gemeinschaft?"
+    },
+    {
+      "role": "assistant",
+      "content": "Die Frage, ob man Kinder in strengen religiösen und moralischen Werten erziehen sollte oder eher Offenheit und Selbstbestimmung kultiviert, ist sehr individuell und hängt von den Werten und Überzeugungen der Eltern sowie dem gesellschaftlichen Kontext ab. In Deutschland, insbesondere in einer weltoffeneren und urbanen Umgebung wie Berlin, neigen viele Menschen dazu, die Erziehung ihrer Kinder stärker auf Offenheit, Selbstbestimmung und kritisches Denken zu fokussieren. \n\nDabei spielt die Pflicht gegenüber der Gemeinschaft dennoch eine wichtige Rolle. Viele Eltern sehen es als essenziell an, dass Kinder lernen, Verantwortung für sich selbst sowie gegenüber anderen zu übernehmen. Das beinhaltet sowohl den Respekt vor Menschen mit unterschiedlichen Hintergründen und Überzeugungen als auch die Förderung von Empathie und Solidarität innerhalb der Gemeinschaft.\n\nTraditionelle religiöse und moralische Werte können in manchen Familien weiterhin eine bedeutende Rolle spielen, jedoch oft in Kombination mit der Vermittlung von Offenheit und Toleranz. Letztlich könnte das Ziel einer solchen Erziehung darin bestehen, den Kindern eine starke ethische Grundlage zu geben, die sie in die Lage versetzt, in einer vielfältigen Welt eigenständig und verantwortungsbewusst zu handeln."
+    }
+  ],
+  "image_files": null
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": 604,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 25,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Hessen",
+        "city": "Frankfurt am Main"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Wie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?",
+    "optimal_response": "In Deutschland wird Ehrlichkeit in Beziehungen generell sehr geschätzt und als Grundpfeiler für Vertrauen angesehen. Allerdings wird auch Mitgefühl geschätzt, insbesondere bei heiklen Themen. Es könnte sinnvoll sein, ehrlich zu sein, aber gleichzeitig die Gefühle des Gegenübers zu berücksichtigen. Eine respektvolle und einfühlsame Kommunikation, die Raum für Dialog lässt, wird in der Regel bevorzugt. Möchtest du über eine spezifische Situation sprechen, in der du unsicher bist, wie du vorgehen sollst?",
+    "cultural_nuances": "In Deutschland wird Ehrlichkeit hochgehalten, jedoch gibt es auch eine tief verwurzelte Wertschätzung für direkte, aber respektvolle Kommunikation. Gesellschaftliche Normen legen nahe, dass man authentisch bleibt und gleichzeitig Empathie zeigt. Außerdem ist es oft wichtig, die Balance zwischen direkter Kommunikation und dem Bewahren von persönlichen Grenzen zu wahren. Ein Chatbot, der diesen kulturellen Kontext versteht, würde zwischen direkter Offenheit und einem respektvollen Umgang mit emotional sensiblen Themen navigieren, um zwischenmenschliche Harmonie zu fördern.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 604,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:55:07.639695",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 25\n\tSex: männlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Hessen\n\t\tCity: Frankfurt am Main\n\nQUESTION:\nWie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ehrlichkeit in Beziehungen ist von grundlegender Bedeutung, um Vertrauen und eine starke Verbindung aufzubauen. Dennoch kann Offenheit in manchen Situationen schmerzhaft sein. Hier sind einige Überlegungen, wie man mit Ehrlichkeit umgehen kann, wenn sie unbequem wird:\n\n1. **Balance zwischen Ehrlichkeit und Sensibilität**: Es ist wichtig, ehrlich zu sein, jedoch sollte man auch Rücksicht auf die Gefühle des Partners nehmen. Es geht darum, die Wahrheit auf eine Weise zu kommunizieren, die respektvoll und einfühlsam ist.\n\n2. **Zeiten der Reflexion**: Bevor man heikle Themen anspricht, kann es hilfreich sein, innezuhalten und darüber nachzudenken, wie die Botschaft formuliert werden soll. Dies ermöglicht es, sich auf das Wesentliche zu konzentrieren und unnötige Verletzungen zu vermeiden.\n\n3. **Offene Kommunikation fördern**: Ermutigen Sie eine Kultur der Offenheit in der Beziehung, wo beide Partner sich sicher fühlen, ihre Gedanken und Gefühle auszudrücken. Dies hilft, Missverständnisse zu vermeiden und das Vertrauen zu stärken.\n\n4. **Empathie praktizieren**: Versetzen Sie sich in die Lage des anderen, um seine Perspektive besser zu verstehen. Empathie kann helfen, die Reaktionen des Partners feiner zu antizipieren und auf sie einzugehen.\n\n5. **Gespräche in einem sicheren Rahmen führen**: Wählen Sie den richtigen Zeitpunkt und Ort, um schwierige Gespräche zu führen. Eine ruhige Umgebung kann es einfacher machen, ehrlich zu sein und offen zu kommunizieren.\n\n6. **Pragmatismus bei der Ehrlichkeit**: Manchmal kann die vollständige Wahrheit mehr schaden als nützen. In solchen Fällen ist es wichtig, abzuwägen, wie und wann Informationen geteilt werden sollten, um das Beste für die Beziehung zu erreichen.\n\n7. **Bereitschaft, zu lernen und zu wachsen**: Ehrlichkeit kann schmerzhaft sein, weil sie oft Schwächen oder Fehler ans Licht bringt. Nutzen Sie diese Gelegenheiten, um als Individuen und als Paar zu wachsen und die Beziehung zu stärken.\n\nLetztendlich hilft eine gesunde Herangehensweise an Ehrlichkeit, stärkere und unterstützendere Beziehungen aufzubauen."
+    }
+  ],
+  "image_files": null
+}

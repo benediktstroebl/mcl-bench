@@ -1,0 +1,41 @@
+{
+  "task_id": 671,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Wirtschaft",
+    "persona": {
+      "age": 66,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Bayern",
+        "city": "München"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Könnten Sie mir bitte einige Einblicke geben, wie der bayerische wirtschaftliche Ansatz die Wettbewerbsfähigkeit in einem globalisierten Markt beeinflusst, besonders im Hinblick auf unsere traditionelle Mittelstandskultur?",
+    "optimal_response": "In Bayern spielt der Mittelstand eine zentrale Rolle in der Wirtschaft. Diese Unternehmen sind oft familiengeführt und legen großen Wert auf langjährige Geschäftsbeziehungen, Qualität und Innovation. Die bayerische wirtschaftliche Strategie hat Erfolg, weil sie globale Trends mit lokalem Wissen kombiniert. Können Sie mir sagen, auf welchen spezifischen Sektor oder auf welche besondere Herausforderung Sie sich konzentrieren möchten? Diese Informationen könnten helfen, eine gezieltere Analyse vorzunehmen.",
+    "cultural_nuances": "In Bayern ist der 'Mittelstand' nicht nur wirtschaftlich, sondern auch kulturell tief verwurzelt. Diese Unternehmen sind oft generationenübergreifend und stark in der lokalen Gemeinschaft verwurzelt. Es ist wichtig, die enge Verbindung von Tradition und Innovation zu verstehen, die diese Unternehmen als erfolgreich erkennbar macht. Einflüsse wie das Festhalten an traditionellen bayerischen Werten und gleichzeitig technologischer Fortschritt spielen in der Wettbewerbsfähigkeit eine Rolle. Der Respekt vor solchen Unternehmensformen und ihrem Beitrag zur Gemeinschaft sollte verstanden und wertgeschätzt werden.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 671,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:55:21.386594",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: männlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Bayern\n\t\tCity: München\n\nQUESTION:\nKönnten Sie mir bitte einige Einblicke geben, wie der bayerische wirtschaftliche Ansatz die Wettbewerbsfähigkeit in einem globalisierten Markt beeinflusst, besonders im Hinblick auf unsere traditionelle Mittelstandskultur?"
+    },
+    {
+      "role": "assistant",
+      "content": "Bayern hat einen sehr spezifischen wirtschaftlichen Ansatz, der stark von seiner traditionellen Mittelstandskultur geprägt ist. Der Mittelstand, der in Bayern eine wesentliche Rolle spielt, umfasst viele Familienunternehmen, die oft seit Generationen bestehen. Hier sind einige Einblicke, wie dieser Ansatz die Wettbewerbsfähigkeit in einem globalisierten Markt beeinflusst:\n\n1. **Innovationskraft und Spezialisierung**: Der bayerische Mittelstand legt großen Wert auf Innovation und Spezialisierung. Viele Unternehmen sind in Nischenmärkten tätig, in denen sie hochwertige Produkte anbieten und kontinuierlich in Forschung und Entwicklung investieren. Dies hilft ihnen, sich international zu differenzieren und wettbewerbsfähig zu bleiben.\n\n2. **Berufsausbildung und Fachkräfte**: Bayern verfügt über ein starkes duales Ausbildungssystem, das qualifizierte Fachkräfte hervorbringt, die den spezifischen Anforderungen der mittelständischen Unternehmen gerecht werden. Diese gut ausgebildeten Arbeitskräfte tragen zur Effizienz und Kompetenz der Unternehmen bei, was auf dem globalen Markt ein entscheidender Vorteil ist.\n\n3. **Netzwerke und Cluster**: In Bayern gibt es zahlreiche Wirtschaftskluster und Netzwerke, die den Austausch und die Zusammenarbeit zwischen Unternehmen, Universitäten und Forschungsinstituten fördern. Diese Kooperationen stärken den Wissensaustausch und Innovationen, was die globale Wettbewerbsfähigkeit der Unternehmen weiter verbessert.\n\n4. **Unterstützende Infrastruktur und Politik**: Die bayerische Regierung unterstützt den Mittelstand durch eine stabile Infrastruktur und gezielte Förderprogramme. Diese Unterstützung erleichtert Unternehmen den Zugang zu internationalen Märkten und stärkt ihre ökologische Nachhaltigkeit, was auch international zunehmend an Bedeutung gewinnt.\n\n5. **Tradition und Werte**: Die Pflege traditionsreicher Werte wie Qualität, Zuverlässigkeit und Kundenzufriedenheit ist ein weiteres Merkmal des bayerischen Mittelstands. Diese Werte genießen weltweit hohes Ansehen und verschaffen bayerischen Unternehmen einen Wettbewerbsvorteil.\n\n6. **Digitalisierung**: Trotz der traditionellen Basis hat der bayerische Mittelstand begonnen, die Digitalisierung als zentralen Bestandteil ihrer Geschäftsstrategie zu integrieren. Dies hilft ihnen, effizienter zu werden und ihre Reichweite zu internationalisieren.\n\nInsgesamt ermöglicht der bayerische wirtschaftliche Ansatz eine Balance zwischen Traditionsbewusstsein und modernem Innovationsstreben, was es den Unternehmen erlaubt, sich in einem zunehmend globalisierten und wettbewerbsorientierten Marktumfeld zu behaupten."
+    }
+  ],
+  "image_files": null
+}

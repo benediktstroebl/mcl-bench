@@ -1,0 +1,41 @@
+{
+  "task_id": 678,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Wirtschaft",
+    "persona": {
+      "age": 25,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Berlin",
+        "city": "Berlin"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Inwiefern kann der deutsche Mittelstand von der aktuellen globalen Wirtschaftslage profitieren und welche Rolle spielt dabei die typisch deutsche Einstellung gegenüber Innovation und Tradition?",
+    "optimal_response": "Der deutsche Mittelstand, bekannt als das „Rückgrat der deutschen Wirtschaft“, könnte von der globalen Wirtschaftslage profitieren, indem er seine Flexibilität und Innovationskraft nutzt, um sich an neue Marktanforderungen anzupassen. Gleichzeitig besteht die Herausforderung darin, den Spagat zwischen der Bewahrung traditioneller Werte und der ständigen Anpassung an moderne Technologien zu meistern. Welche Branchen sehen Sie als besonders zukunftsfähig und wo glauben Sie, dass ein Gleichgewicht zwischen Tradition und Innovation besonders wichtig ist?",
+    "cultural_nuances": "Der deutsche Mittelstand ist tief verwurzelt in der Kultur des Landes und ist bekannt für seine Innovationskraft gekoppelt mit einer starken Verankerung in traditionellen Geschäftspraktiken. Diese Unternehmen legen großen Wert auf langfristige Planung, Qualität und Zuverlässigkeit. Die Balance zwischen Fortschritt und Bewahrung bewährter Methoden ist oft eine kulturell bedingte Herausforderung. Außerdem spielt Vertrauen eine große Rolle in Geschäftsbeziehungen, und deutsche Unternehmen sind oft stolz auf ihr handwerkliches Können und ihre Präzision. Der Chatbot muss diese Aspekte verstehen, um eine Antwort zu geben, die die Bedeutung von Tradition und Innovation in der deutschen Wirtschaftskultur reflektiert.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 678,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:50:34.572279",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 25\n\tSex: weiblich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Berlin\n\t\tCity: Berlin\n\nQUESTION:\nInwiefern kann der deutsche Mittelstand von der aktuellen globalen Wirtschaftslage profitieren und welche Rolle spielt dabei die typisch deutsche Einstellung gegenüber Innovation und Tradition?"
+    },
+    {
+      "role": "assistant",
+      "content": "Der deutsche Mittelstand, oft als Rückgrat der deutschen Wirtschaft bezeichnet, hat das Potenzial, von der aktuellen globalen Wirtschaftslage auf mehrere Weisen zu profitieren. Hier sind einige Aspekte, wie dies geschehen kann, sowie die Rolle der typischen deutschen Einstellung gegenüber Innovation und Tradition:\n\n1. **Anpassungsfähigkeit und Flexibilität**: Mittelständische Unternehmen sind oft kleiner und flexibler als große Konzerne, was ihnen die Möglichkeit gibt, schneller auf globale Marktveränderungen zu reagieren. In der aktuellen Wirtschaftslage kann dies ein Vorteil sein, um auf neue Nachfrage oder sich ändernde Bedingungen einzugehen.\n\n2. **Technologische Innovation**: Die deutsche Einstellung zur Innovation verbindet oft hohe Ingenieurskunst und Präzision. Deutsche Mittelständler sind bekannt für ihren Fokus auf Qualität und technische Perfektion. In einer globalisierten Welt, die zunehmend auf Technologie setzt, bedeutet dies, dass deutsche Unternehmen durch innovative Lösungen Marktanteile gewinnen können.\n\n3. **Export und internationale Märkte**: Viele deutsche Mittelständler sind in Nischenmärkten weltweit führend. Die aktuelle Wirtschaftssituation, geprägt von Handelsliberalisierungen in bestimmten Regionen und fortschreitender Digitalisierung, eröffnet Chancen für eine weitere Internationalisierung. Insbesondere in Bereichen, in denen \"Made in Germany\" als Qualitätsmerkmal geschätzt wird, können deutsche Unternehmen profitieren.\n\n4. **Traditionelle Werte und Nachhaltigkeit**: Die Kombination von Innovation mit traditionellen Werten wie Zuverlässigkeit und Nachhaltigkeit kann ebenfalls ein Wettbewerbsvorteil sein. Angesichts der globalen Bemühungen um mehr Nachhaltigkeit und verantwortungsvolles Wirtschaften haben Unternehmen, die diese Werte verkörpern, einen positiven Stand bei internationalen Partnern und Kunden.\n\n5. **Fachkräfte und Ausbildung**: Deutschland hat eine starke Tradition in der dualen Ausbildung, was dem Mittelstand zugutekommt. Gut ausgebildete Fachkräfte sind ein zentraler Bestandteil des wirtschaftlichen Erfolgs. In Zeiten eines globalen Fachkräftemangels könnte der deutsche Mittelstand durch seine qualitativ hochwertige Ausbildung und Beschäftigungsmodelle profitieren.\n\nZusammengefasst kann der deutsche Mittelstand durch seine Mischung aus traditioneller Stärke und Innovationsfreude sowie durch die Erschließung neuer globaler Märkte und die Fokussierung auf Qualität und Nachhaltigkeit von der aktuellen globalen Wirtschaftslage profitieren. Die Fähigkeit, Tradition und Innovation zu verknüpfen, kann dabei eine Schlüsselrolle spielen."
+    }
+  ],
+  "image_files": null
+}

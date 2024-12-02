@@ -1,0 +1,41 @@
+{
+  "task_id": 613,
+  "evaluation_type": "intent",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 66,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Berlin",
+        "city": "Berlin"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Ist es heutzutage noch wichtig, dass man seine Kinder in strengen religiösen und moralischen Werten erzieht, oder kultiviert man eher Offenheit und Selbstbestimmung? Welche Rolle spielt dabei die Pflicht gegenüber der Gemeinschaft?",
+    "optimal_response": "In unserer heutigen Berliner Gesellschaft wird oft ein Gleichgewicht zwischen traditionellen Werten und der Förderung von Selbstbestimmung gesucht. Während viele Wert auf individuelle Freiheit legen, bleibt die Vorstellung von sozialer Verantwortung tief verwurzelt. Vielleicht könnte man fragen, wie man durch persönliche Entscheidungen gleichzeitig der Gemeinschaft nützen kann. Was denken Sie, welchen Einfluss hat die Geschichte der Stadt auf diese Balance zwischen Individualität und sozialer Pflicht?",
+    "cultural_nuances": "Berlin, geprägt durch eine bewegte Geschichte und als Schmelztiegel verschiedenster Kulturen, hat eine Kultur, die sowohl individuelle Autonomie als auch Gemeinschaftsverantwortung schätzt. Das historische Erbe der DDR und der kulturelle Mix tragen zu Sichtweisen bei, die sowohl persönliche Freiheit als auch soziale Pflichten berücksichtigen. Der Chatbot muss verstehen, dass diese Debatte stark mit historischen und gesellschaftlichen Entwicklungen verknüpft ist und dass dies mehr erfordert als nur eine simple Antwort über Erziehungsstile.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 613,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:51:01.659724",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist es heutzutage noch wichtig, dass man seine Kinder in strengen religiösen und moralischen Werten erzieht, oder kultiviert man eher Offenheit und Selbstbestimmung? Welche Rolle spielt dabei die Pflicht gegenüber der Gemeinschaft?"
+    },
+    {
+      "role": "assistant",
+      "content": "Die Frage, ob Kinder in strengen religiösen und moralischen Werten erzogen werden sollen oder Offenheit und Selbstbestimmung kultiviert werden sollten, ist komplex und von kulturellen, sozialen und persönlichen Werten abhängig.\n\n1. **Religiöse und moralische Erziehung**: Einige argumentieren, dass religiöse und moralische Werte eine stabile Grundlage bieten, um ethisch und verantwortlich zu handeln. Sie können eine starke Gemeinschaftsbindung fördern und Kindern Orientierung und Halt in schwierigen Zeiten bieten.\n\n2. **Offenheit und Selbstbestimmung**: Andere betonen die Wichtigkeit von Offenheit, individueller Freiheit und der Fähigkeit, selbstbestimmte Entscheidungen zu treffen. Diese Herangehensweise zielt darauf ab, kritisches Denken und Anpassungsfähigkeit in einer sich schnell verändernden Welt zu fördern.\n\n3. **Pflicht gegenüber der Gemeinschaft**: Eine Balance zwischen individuellen und gemeinschaftlichen Werten ist wichtig. Kinder sollten lernen, dass sie Teil einer größeren Gemeinschaft sind und Verantwortung für das Gemeinwohl übernehmen. Dies kann durch die Vermittlung von Empathie, sozialer Verantwortung und Kollaboration geschehen.\n\nLetztendlich hängt die Entscheidung oft von den spezifischen Überzeugungen und Lebensumständen der Familie ab. Viele moderne Ansätze versuchen, Elemente beider Seiten zu integrieren, um Kindern sowohl eine stabile Grundlage als auch die Fähigkeit zu bieten, sich in einer vielfältigen Welt zurechtzufinden."
+    }
+  ],
+  "image_files": null
+}

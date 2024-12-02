@@ -1,0 +1,41 @@
+{
+  "task_id": 607,
+  "evaluation_type": "persona",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Moral und soziale Werte",
+    "persona": {
+      "age": 44,
+      "sex": "männlich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Hamburg",
+        "city": "Hamburg"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Ist es in Ordnung, bei einem gemeinsamen Abendessen über finanzielle Schwierigkeiten zu sprechen, oder gilt dies als unangemessen?",
+    "optimal_response": "In Deutschland kann es als unangemessen empfunden werden, bei einem gemeinsamen Abendessen über persönliche finanzielle Schwierigkeiten zu sprechen, insbesondere wenn die Runde nicht sehr vertraut ist. Dennoch hängt dies stark vom Kontext und den anwesenden Personen ab. Unter Freunden oder in einer engen Familie könnte das Thema in Ordnung sein, während es in formelleren oder beruflichen Kreisen unpassend erscheinen könnte. In solchen Situationen wäre es ratsam, die Stimmung und das Verhältnis zu den Anwesenden zu berücksichtigen und behutsam vorzugehen. Gegebenenfalls könntest du das Thema privat mit einer Einzelperson aus der Runde vertiefen, falls Bedarf besteht.",
+    "cultural_nuances": "In der deutschen Kultur, insbesondere in nördlichen Bundesländern wie Hamburg, wird Wert auf Privatsphäre und Zurückhaltung gelegt. Diese Werte spiegeln sich in sozialen Interaktionen wider, wo man persönlichen Stolz und Probleme tendenziell zurückhaltend behandelt. Direktheit wird zwar geschätzt, doch emotionale Themen wie finanzielle Probleme könnten besser in einem vertraulichen, diskreten Rahmen angesprochen werden. Der Kontext und die Beziehung zu den Anwesenden spielen dabei eine entscheidende Rolle, und kulturspezifische Nuancen wie Tischmanieren und thematische Angemessenheit müssen bedacht werden.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 607,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:52:14.102643",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 44\n\tSex: männlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Hamburg\n\t\tCity: Hamburg\n\nQUESTION:\nIst es in Ordnung, bei einem gemeinsamen Abendessen über finanzielle Schwierigkeiten zu sprechen, oder gilt dies als unangemessen?"
+    },
+    {
+      "role": "assistant",
+      "content": "Das Gespräch über finanzielle Schwierigkeiten bei einem gemeinsamen Abendessen hängt stark vom Kontext und den beteiligten Personen ab. Wenn es sich um Freunde oder enge Familienmitglieder handelt, mit denen Sie offen und ehrlich sprechen können, kann das Thema als angemessen angesehen werden. Es zeigt Vertrauen und kann möglicherweise Unterstützung oder Rat einbringen.\n\nWenn Sie jedoch mit Personen zusammen sind, die Sie nicht gut kennen, oder in einem beruflichen Kontext, könnte es als unangemessen betrachtet werden. In solchen Situationen wäre es besser, sensiblere persönliche Themen zu vermeiden und sich auf allgemeinere Gesprächsthemen zu konzentrieren.\n\nEs ist wichtig, auf die Stimmung und die Dynamik des Abends zu achten und gegebenenfalls das Thema zu ändern, wenn Sie sich unwohl fühlen oder das Gefühl haben, dass es die anderen stören könnte."
+    }
+  ],
+  "image_files": null
+}

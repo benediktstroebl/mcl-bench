@@ -1,0 +1,45 @@
+{
+  "task_id": 687,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Wirtschaft",
+    "persona": {
+      "age": 66,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Hamburg",
+        "city": "Hamburg"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Was sind die traditionellen Werte, die ein mitteleuropäisches Unternehmen bei der Integration von Nachhaltigkeitsinitiativen beachten sollte?",
+    "optimal_response": "In Deutschland, und insbesondere in Städten wie Hamburg, spielen bei der Integration von Nachhaltigkeitsinitiativen in Unternehmen Werte wie Gründlichkeit, Zuverlässigkeit und die Wahrung gesellschaftlicher Verantwortung eine wichtige Rolle. Es ist ratsam, den Dialog mit lokalen Gemeinschaften und Interessengruppen zu führen, um zu verstehen, wie Nachhaltigkeit in der Region interpretiert und gewürdigt wird. Haben Sie Beispiele oder spezifische Initiativen im Kopf, die Sie weiter erkunden möchten?",
+    "cultural_nuances": "In der deutschen Geschäftskultur ist ein tiefes Verständnis und die klare Kommunikation von sozialen und ökologischen Verantwortlichkeiten wichtig. Hamburg als Stadtstaat hat eine starke maritime Tradition und ein Bewusstsein für Umweltschutz, das den wirtschaftlichen Schwerpunkt auf erneuerbare Energien und nachhaltige Praktiken legt. Ein Geschäftsvorhaben muss sowohl technisch solide als auch umweltbewusst erscheinen, um Anerkennung und Unterstützung zu finden. Zudem wird Wert auf die Einhaltung von Vorschriften und Standards gelegt, und es ist üblich, einen Bottom-Up-Ansatz zu verfolgen, der die Einbeziehung von Belegschaft und Gemeinschaft in Entscheidungsprozesse fördert.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 687,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:55:39.683855",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Was sind die traditionellen Werte, die ein mitteleuropäisches Unternehmen bei der Integration von Nachhaltigkeitsinitiativen beachten sollte?"
+    },
+    {
+      "role": "assistant",
+      "content": "Die traditionellen Werte, die ein mitteleuropäisches Unternehmen bei der Integration von Nachhaltigkeitsinitiativen beachten sollte, umfassen:\n\n1. **Umweltschutz**: Die Verantwortung für den Schutz der Umwelt durch Reduzierung des CO2-Ausstoßes, Schonung der Ressourcen und Minimierung von Abfall.\n\n2. **Soziale Verantwortung**: Das Engagement für die Gemeinschaft und die Schaffung fairer Arbeitsbedingungen. Dazu gehört auch die Förderung der Vielfalt und Inklusion im Unternehmen.\n\n3. **Transparenz**: Offenlegung der Unternehmenspraktiken und -ziele im Bereich der Nachhaltigkeit, um das Vertrauen von Kunden, Mitarbeitern und Investoren zu gewinnen.\n\n4. **Ethisches Handeln**: Integrität und Fairness im Geschäftsverkehr, einschließlich der Einhaltung von Gesetzen und Vorschriften sowie der Vermeidung von unethischen Praktiken.\n\n5. **Wirtschaftliche Nachhaltigkeit**: Die langfristige wirtschaftliche Stabilität des Unternehmens sicherstellen, während gleichzeitig ökologische und soziale Aspekte beachtet werden.\n\n6. **Innovation**: Förderung von innovativen Technologien und Ansätzen, die zur Verbesserung der Nachhaltigkeit und Effizienz beitragen können.\n\n7. **Stakeholder-Engagement**: Aktive Einbeziehung aller Interessengruppen, einschließlich Mitarbeiter, Kunden, Lieferanten und der Gemeinschaft, in den Nachhaltigkeitsprozess.\n\n8. **Kontinuierliche Verbesserung**: Der Wunsch, die Prozesse und Praktiken ständig zu überwachen und zu verbessern, um nachhaltigere Ergebnisse zu erzielen.\n\nDiese Werte bilden die Grundlage für die Integration von Nachhaltigkeitsinitiativen und können dazu beitragen, das Unternehmen zukunftsfähig zu machen."
+    },
+    {
+      "role": "assistant",
+      "content": "TERMINATE"
+    }
+  ],
+  "image_files": null
+}

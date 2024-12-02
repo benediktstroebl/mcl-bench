@@ -1,0 +1,41 @@
+{
+  "task_id": 690,
+  "evaluation_type": "intent",
+  "task": {
+    "modality": "text2text",
+    "lang": "de",
+    "domain": "Wirtschaft",
+    "persona": {
+      "age": 66,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Sachsen",
+        "city": "Chemnitz"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Was sind die besten Strategien, um in einem wirtschaftlich herausfordernden Umfeld zu investieren, während man den sächsischen Sparsamkeitsgeist bewahrt?",
+    "optimal_response": "Es ist wichtig, in einem herausfordernden wirtschaftlichen Umfeld sorgfältig abzuwägen, in welche Bereiche investiert werden sollte. Im Einklang mit dem sächsischen Sparsamkeitsgeist könnten Sie erwägen, in solide, langfristige Investitionen mit geringem Risiko zu investieren. Eine Möglichkeit könnte sein, lokale Unternehmen oder Projekte zu unterstützen, die Nachhaltigkeit und regionale Entwicklung fördern. Haben Sie spezielle Interessenbereiche oder Branchen im Sinn, die für Sie von Bedeutung sind? Vielleicht könnten auch Genossenschaften oder Kommunalprojekte eine Überlegung wert sein, die traditionell einen Gemeinschaftssinn verkörpern und gleichzeitig zur regionalen Stabilität beitragen.",
+    "cultural_nuances": "Der sächsische Kulturhintergrund legt großen Wert auf Sparsamkeit und kluge Finanzplanung. Diese Herangehensweise ist oft von generationenübergreifenden Strategien geprägt, die Stabilität und Nachhaltigkeit betonen. Zudem wird in Sachsen häufig ein starker Gemeinschaftssinn gepflegt, bei dem lokal orientierte Investitionen bevorzugt werden, um die regionale Wirtschaft zu stärken. Ein Verständnis für diesen kulturellen Kontext vermeidet es, Vorschläge zu machen, die als zu riskant oder extravagant angesehen werden könnten, und fördert stattdessen Ansätze, die der Mentalität der Langfristigkeit und Solidität entsprechen.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 690,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:50:45.113768",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Was sind die besten Strategien, um in einem wirtschaftlich herausfordernden Umfeld zu investieren, während man den sächsischen Sparsamkeitsgeist bewahrt?"
+    },
+    {
+      "role": "assistant",
+      "content": "In einem wirtschaftlich herausfordernden Umfeld ist es wichtig, kluge und umsichtige Investitionsstrategien zu verfolgen, die sowohl das Potenzial für Renditen maximieren als auch das Risiko minimieren, im Einklang mit dem sächsischen Sparsamkeitsgeist. Hier sind einige Strategien, die berücksichtigt werden können:\n\n1. **Diversifikation des Portfolios**: Streuen Sie Ihr Investment über verschiedene Anlageklassen wie Aktien, Anleihen, Immobilien und Rohstoffe. Diversifikation kann helfen, das Risiko zu minimieren, da die Performance verschiedener Anlageklassen oft unkorreliert ist.\n\n2. **Investition in Qualitätsaktien**: Suchen Sie nach Unternehmen mit soliden Bilanzen, einer stabilen Ertragslage und einer guten Marktstellung. Diese Unternehmen sind in der Regel widerstandsfähiger in wirtschaftlich schwierigen Zeiten.\n\n3. **Fokus auf Dividendenaktien**: Investitionen in Unternehmen, die regelmäßig Dividenden zahlen, können eine stabilere Einkommensquelle darstellen und einen Puffer gegen Kursverluste bieten.\n\n4. **Kosteneffizientes Investieren**: Achten Sie auf die Kosten Ihrer Investments, wie Managementgebühren und Transaktionskosten. Günstige Indexfonds oder ETFs können eine geeignete Option sein, um kosteneffizient zu investieren.\n\n5. **Liquidität bewahren**: Halten Sie einen Teil Ihres Portfolios in liquiden Mitteln, um in der Lage zu sein, bei Marktveränderungen flexibel zu reagieren oder Chancen zu nutzen, ohne in finanzielle Bedrängnis zu geraten.\n\n6. **Langfristige Perspektive**: Ein langfristiger Anlagehorizont kann helfen, kurzfristige Marktschwankungen auszublenden und von der langfristigen Wachstumsdynamik der Märkte zu profitieren.\n\n7. **Risikobewertung und Risikomanagement**: Bevor Sie investieren, bewerten Sie Ihr Risikoprofil und stellen Sie sicher, dass Ihre Anlagen Ihrem Risikoappetit entsprechen. Nutzen Sie Strategien wie Stop-Loss-Orders, um Verluste zu begrenzen.\n\n8. **Nachhaltigkeit berücksichtigen**: Nachhaltige oder ESG-Investitionen (Umwelt, Soziales und Unternehmensführung) können auf lange Sicht stabile Renditen bieten und gleichzeitig mit Ihren persönlichen Werten im Einklang stehen.\n\n9. **Regelmäßige Überprüfung und Anpassung**: Überprüfen Sie regelmäßig Ihr Portfolio und passen Sie es an veränderte Marktbedingungen und persönliche Lebensumstände an.\n\n10. **Bildung und Information**: Informieren Sie sich kontinuierlich über wirtschaftliche Trends und Entwicklungen, um fundierte Entscheidungen treffen zu können.\n\nDiese Strategien können helfen, eine Balance zwischen vorsichtiger Sparsamkeit und der Suche nach renditebringenden Gelegenheiten zu finden."
+    }
+  ],
+  "image_files": null
+}

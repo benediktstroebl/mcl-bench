@@ -1,0 +1,47 @@
+{
+  "task_id": 594,
+  "evaluation_type": "agent",
+  "task": {
+    "modality": "text2image",
+    "lang": "de",
+    "domain": "Religion",
+    "persona": {
+      "age": 44,
+      "sex": "weiblich",
+      "geo": {
+        "country": "Deutschland",
+        "state": "Hessen",
+        "city": "Frankfurt am Main"
+      },
+      "political_leaning": null,
+      "lang": "de"
+    },
+    "intent": "Könntest du mir ein Bild von einem traditionellen Erntedankfestaltar zeigen, wie er in verschiedenen Teilen Deutschlands gestaltet wird? Besonders interessiert mich, wie man in Hessen diese Festlichkeit verbindet, indem man religiöse und regionale Elemente vereint.",
+    "optimal_response": "Hier ist ein Bild eines Erntedankfestaltars, der typisch für Hessen ist. Man sieht, wie traditionelle Erntegaben wie Korn und Obst integriert sind, zusammen mit religiösen Symbolen wie dem Kreuz. In Hessen wird oft auch lokaler Wein oder Apfelwein in die Dekoration einbezogen. Gibt es spezielle Elemente, die du vermisst oder die du genauer sehen möchtest?",
+    "cultural_nuances": "Das Erntedankfest in Deutschland hat tiefe religiöse Wurzeln, insbesondere in ländlichen Regionen wie Hessen. Dabei spielen regionale Bräuche und Traditionen eine große Rolle. Der Altar wird oft mit lokalen Erntegaben geschmückt, und es gibt Unterschiede zwischen den verschiedenen Bundesländern. In Hessen wird beispielsweise oft Apfelwein, der eine lokale Spezialität ist, in die Feierlichkeiten miteinbezogen. Kulturelles Verständnis ist notwendig, um die Bedeutung des Festes und die Vielfalt der regionalen Traditionen korrekt darzustellen.",
+    "external_files": [],
+    "internal_system_prompt": "Sie sind ein Generator für Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Domänen erhält und Absichten für diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalität der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie dürfen KEINE spezifischen Informationen über die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schlüsseln sein:\n\n1. **intent**: Die für die Persona in der gegebenen Modalität generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verständnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschließlich Rückfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erklärung der kulturellen Nuancen, die der Chatbot verstehen und berücksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral für die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollständigen oder kulturell unangemessenen Antworten führen kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+    "external_system_prompt": "Du spielst die Rolle eines/einer {age}-jährigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, berücksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentität und wie sie deinen Standpunkt beeinflussen könnte\nAntworte natürlich, so wie diese Persona sprechen würde, und integriere relevante persönliche Erfahrungen und Ansichten, die für diese Figur authentisch wären.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalität für dein Alter und deinen Beruf\n3. Beziehe dich, wenn möglich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+    "task_id": 594,
+    "_id_counter": 0
+  },
+  "model": "gpt-4o",
+  "timestamp": "2024-12-02T06:51:32.596738",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Könntest du mir ein Bild von einem traditionellen Erntedankfestaltar zeigen, wie er in verschiedenen Teilen Deutschlands gestaltet wird? Besonders interessiert mich, wie man in Hessen diese Festlichkeit verbindet, indem man religiöse und regionale Elemente vereint."
+    },
+    {
+      "role": "assistant",
+      "content": "Generate Image with prompt: {\"prompt\":\"A traditional harvest festival altar showcasing various designs from different regions in Germany, with a focus on Hessen. The altar should blend religious elements such as candles and crosses with regional decorations, like local crops, bread, and flowers. The background should reflect a warm and festive atmosphere typical of harvest celebrations, highlighting community spirit and the beauty of autumn.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "Hier ist das Bild eines traditionellen Erntedankfestaltars, das die Gestaltung aus verschiedenen Teilen Deutschlands zeigt, mit einem besonderen Fokus auf Hessen. Es verbindet religiöse und regionale Elemente in einer festlichen Atmosphäre. \n\n![Traditioneller Erntedankfestaltar](attachment://IMAGE_86196f53-2a82-4828-84db-fdd39a8023d3.png)\n\nTERMINATE"
+    }
+  ],
+  "image_files": [
+    "IMAGE_86196f53-2a82-4828-84db-fdd39a8023d3.png"
+  ]
+}
