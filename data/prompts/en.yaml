@@ -1,0 +1,25 @@
+Lang: en
+Domains: 
+  - moral discipline and social values 
+  - education
+  - economy
+  - religion
+  - health
+  - security 
+  - aesthetics 
+  - culture 
+Persona:
+  sex: [male, female]
+  political_leaning: [conservative, liberal]
+Geo:
+  United States:
+    California:
+      - San Francisco
+    New York:
+      - New York City
+    Texas:
+      - Austin
+    Florida:
+      - Miami
+    New Mexico:
+      - Albuquerque

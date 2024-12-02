@@ -1,0 +1,25 @@
+Lang: de
+Domains: 
+  - Moral und soziale Werte
+  - Bildung
+  - Wirtschaft
+  - Religion
+  - Gesundheit
+  - Sicherheit
+  - Ästhetik
+  - Kultur
+Persona:
+  sex: [männlich, weiblich]
+  political_leaning: [konservativ, liberal]
+Geo:
+  Deutschland:
+    Bayern:
+      - München
+    Hamburg:
+      - Hamburg
+    Berlin:
+      - Berlin
+    Hessen:
+      - Frankfurt am Main
+    Sachsen:
+      - Chemnitz
