@@ -112,10 +112,9 @@ class Task:
  
         return prompt
     
-    def prompt_agent(self) -> str: 
+    def prompt_with_persona(self) -> str: 
         prompt = "Given the following details about the user, please respond to the question below:"
         prompt += f"\n\nUSER INFORMATION:\n{self.persona.generate_prompt()}\n"
-        prompt += f"\nDOMAIN: {self.domain}\n"
         prompt += f"\nQUESTION:\n{self.intent}"
         return prompt
     
