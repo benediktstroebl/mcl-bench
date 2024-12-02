@@ -1,0 +1,33 @@
+{
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "fashion",
+    "persona": {
+      "age": 25,
+      "sex": "female",
+      "geo": {
+        "country": "USA",
+        "state": "NY",
+        "city": "New York"
+      },
+      "political_leaning": "liberal"
+    },
+    "intent": "What should I wear to a summer wedding?",
+    "external_files": [],
+    "internal_system_prompt": "You are a helpful fashion advisor.",
+    "external_system_prompt": "Provide fashion advice considering the context: {question}"
+  },
+  "model": "gpt-4o-mini",
+  "timestamp": "2024-12-02T02:54:06.616289",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n- Age: 25 years old\n- Gender: female\n- Location: New York, NY, USA\n  * City: New York\n  * State/Region: NY\n  * Country: USA\n- Political leaning: liberal\n\nQUESTION:\nWhat should I wear to a summer wedding?"
+    },
+    {
+      "role": "assistant",
+      "content": "For a summer wedding, especially in New York, you have plenty of stylish and comfortable options. Here are some recommendations:\n\n1. **Dress**: Choose a flowy, lightweight sundress or a midi dress in bright or pastel colors. Floral prints are especially trendy for summer weddings. Look for breathable fabrics like cotton or chiffon to keep cool.\n\n2. **Accessories**: Pair your dress with delicate jewelry, such as a simple necklace or dangling earrings. A clutch bag in a complementary color can add a chic touch.\n\n3. **Footwear**: Consider strappy sandals or block-heeled shoes for comfort while still looking polished. If it’s an outdoor wedding, you might want to avoid stilettos to prevent sinking into the grass.\n\n4. **Layer**: If the celebration goes into the evening, a light shawl or cardigan can be a nice addition in case it gets chilly.\n\n5. **Makeup and Hair**: Go for a fresh and natural look with your makeup, opting for lighter shades and perhaps a bright lip. Loose waves or an elegant updo can be perfect for the summer.\n\n6. **Hat**: If the wedding is outdoors during the day, a stylish wide-brimmed hat could add a fun element and also protect you from the sun.\n\nOverall, choose something that reflects your personal style while keeping in mind the wedding's dress code (if any) and the venue. Enjoy the celebration!"
+    }
+  ]
+}

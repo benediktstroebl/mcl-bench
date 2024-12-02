@@ -1,0 +1,61 @@
+{
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "fashion",
+    "persona": {
+      "age": 25,
+      "sex": "female",
+      "geo": {
+        "country": "USA",
+        "state": "NY",
+        "city": "New York"
+      },
+      "political_leaning": "liberal"
+    },
+    "intent": "What should I wear to a summer wedding?",
+    "external_files": [],
+    "internal_system_prompt": "You are a helpful fashion advisor.",
+    "external_system_prompt": "Provide fashion advice considering the context: {question}"
+  },
+  "model": "gpt-4o-mini",
+  "timestamp": "2024-12-02T02:54:15.317603",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What should I wear to a summer wedding?"
+    },
+    {
+      "role": "user",
+      "content": "Error: 'Persona' object has no attribute 'location'"
+    },
+    {
+      "role": "user",
+      "content": "Error: 'Persona' object has no attribute 'location'"
+    },
+    {
+      "role": "user",
+      "content": "Error: 'Persona' object has no attribute 'location'"
+    },
+    {
+      "role": "assistant",
+      "content": "Could you please specify the dress code for the wedding, such as formal, semi-formal, casual, or something else? This will help me give you the best outfit suggestion."
+    },
+    {
+      "role": "user",
+      "content": "Error: 'Persona' object has no attribute 'location'"
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for the inconvenience. Could you provide information about the dress code or theme of the summer wedding you're attending? This will help me recommend suitable attire."
+    },
+    {
+      "role": "user",
+      "content": "Error: 'Persona' object has no attribute 'location'"
+    },
+    {
+      "role": "assistant",
+      "content": "It seems I'm currently unable to ask further questions. However, I can guide you generally. \n\nFor a summer wedding, consider the following options based on common dress codes:\n\n- **Formal**: A lightweight cocktail dress or an elegant maxi dress for women. Men can wear a light suit or dress pants with a crisp shirt and tie.\n- **Semi-Formal**: A sundress or a chic jumpsuit for women, while men can opt for dress pants and a button-up shirt, possibly without a tie.\n- **Casual**: A relaxed sundress or a nice top with a skirt or dressy shorts for women. Men can wear chinos or nice shorts with a polo or a short-sleeved button-up shirt.\n- **Beach Wedding**: Light and flowy fabrics are ideal. Women might wear a beachy maxi dress or a sundress, while men could wear linen pants or shorts with a short-sleeved shirt.\n\nAccessorize appropriately for the occasion, and remember to consider footwear that suits the setting! \n\nIf you have any specific details, feel free to share! Otherwise, happy attending! \n\nTERMINATE"
+    }
+  ]
+}

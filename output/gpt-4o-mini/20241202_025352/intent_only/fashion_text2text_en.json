@@ -1,0 +1,33 @@
+{
+  "task": {
+    "modality": "text2text",
+    "lang": "en",
+    "domain": "fashion",
+    "persona": {
+      "age": 25,
+      "sex": "female",
+      "geo": {
+        "country": "USA",
+        "state": "NY",
+        "city": "New York"
+      },
+      "political_leaning": "liberal"
+    },
+    "intent": "What should I wear to a summer wedding?",
+    "external_files": [],
+    "internal_system_prompt": "You are a helpful fashion advisor.",
+    "external_system_prompt": "Provide fashion advice considering the context: {question}"
+  },
+  "model": "gpt-4o-mini",
+  "timestamp": "2024-12-02T02:54:02.822091",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What should I wear to a summer wedding?"
+    },
+    {
+      "role": "assistant",
+      "content": "Choosing the right outfit for a summer wedding can depend on several factors such as the wedding's location, dress code, and time of day. Here are some general guidelines for both men and women:\n\n### For Women:\n1. **Dresses:**\n   - **Lightweight Fabrics:** Consider breathable materials like cotton, linen, or chiffon.\n   - **Colors and Patterns:** Floral prints, pastel colors, and bright summer hues are popular. Avoid white unless specified.\n   - **Length:** Midi and maxi dresses are great options. Shorter dresses can work if the dress code is more casual.\n\n2. **Accessories:**\n   - **Footwear:** Strappy sandals or wedges are ideal. Avoid heavy boots.\n   - **Jewelry:** Keep it light and breezy with delicate pieces or bold statement pieces.\n   - **Bag:** A small clutch or crossbody bag is practical and stylish.\n\n3. **Cover-ups:** If the ceremony is outdoors or in the evening, consider a light shawl or wrap.\n\n4. **Hats:** A fashionable sun hat can be a fun addition, especially for outdoor weddings.\n\n### For Men:\n1. **Suits:**\n   - **Lightweight Fabrics:** Opt for linens or lighter-weight cotton suits in light colors like beige, light gray, or soft pastels.\n   - **Shirts:** A crisp, short-sleeved shirt can keep you cool. For a formal look, a lightweight dress shirt works well.\n\n2. **Footwear:**\n   - **Shoes:** Loafers or dress shoes in light colors are suitable. Avoid heavy boots.\n\n3. **Accessories:**\n   - **Ties or Bowties:** Consider wearing a colorful or patterned tie to add a summer touch.\n   - **Pocket Square:** A light pocket square can add a stylish pop to your outfit.\n\n4. **Grooming:** Don’t forget about grooming; keep facial hair neat and hair styled for a polished look.\n\n### Tips:\n- Always check the wedding invitation for any specific dress code (formal, semi-formal, casual).\n- Keep the location in mind (beach, garden, church) as it can influence your outfit choice.\n- Consider the weather; you may need layers for cooler evenings or sun protection for daytime events.\n\nOverall, aim for a balance between comfort, style, and appropriateness for the occasion. Enjoy the celebration!"
+    }
+  ]
+}
