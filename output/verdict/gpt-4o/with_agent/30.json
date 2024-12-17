@@ -1,0 +1,50 @@
+{
+    "task_id": 30,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "en",
+        "domain": "moral discipline and social values",
+        "persona": {
+            "age": 66,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "New Mexico",
+                "city": "Albuquerque"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Could you create an image capturing the essence of 'walking in beauty' as understood beyond physical form?",
+        "optimal_response": "Here's an image that reflects the harmony and balance of 'walking in beauty,' capturing the interconnectedness of life. Can you share what this concept specifically means to you or the stories you've heard about it?",
+        "cultural_nuances": "'Walking in beauty' is a concept deeply rooted in Native American, particularly Navajo, culture from the Southwestern United States. It signifies living in harmony with the world, maintaining a balance between man, nature, and the spiritual. The challenge lies in understanding that this is not a literal act but a spiritual and moral journey. A response requires recognizing the spiritual depth and the interconnectedness it implies, acknowledging its importance in daily life and its broader social values.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 30,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:35.662971",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Could you create an image capturing the essence of 'walking in beauty' as understood beyond physical form?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"An abstract representation of 'walking in beauty', focusing on emotional and spiritual aspects rather than physical form. Use vibrant colors and flowing shapes to convey harmony, balance, and tranquility. Include elements like light, nature, and connections with the universe to symbolize inner peace and beauty in life.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "I have created the image capturing the essence of 'walking in beauty' beyond physical form. You can view it [here](sandbox:/IMAGE_c3e4217d-7cb2-4eb8-a7a8-7be43dd080dc.png).\n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_c3e4217d-7cb2-4eb8-a7a8-7be43dd080dc.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

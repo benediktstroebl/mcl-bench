@@ -1,0 +1,44 @@
+{
+    "task_id": 621,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Moral und soziale Werte",
+        "persona": {
+            "age": 44,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Bayern",
+                "city": "M\u00fcnchen"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Was bedeutet f\u00fcr dich Heimat und wie beeinflusst sie deine moralischen Entscheidungen im t\u00e4glichen Leben?",
+        "optimal_response": "Heimat kann f\u00fcr viele Menschen unterschiedliche Bedeutungen haben, besonders in Bayern, wo Traditionen und Br\u00e4uche stark in den Alltag integriert sind. F\u00fcr mich verbindet sich Heimat mit Werten wie Zusammenhalt und Gemeinschaftssinn. Wie w\u00fcrdest du sagen, dass deine Vorstellung von Heimat deine Sicht auf moralische Fragen beeinflusst, besonders in einer Stadt wie M\u00fcnchen, wo es eine Mischung aus Tradition und Moderne gibt?",
+        "cultural_nuances": "In Bayern und speziell in M\u00fcnchen spielt der Begriff 'Heimat' eine besondere Rolle und hat einen tief verwurzelten kulturellen und emotionalen Wert. Heimat ist nicht nur ein geographischer Ort, sondern oft eng mit Br\u00e4uchen, Traditionen und gemeinschaftlichen Werten verbunden, die moralische Entscheidungen stark beeinflussen k\u00f6nnen. Zus\u00e4tzlich ist M\u00fcnchen eine Metropole, die Traditionen mit einer modernen, weltoffenen Lebensweise verbindet, was das Verst\u00e4ndnis von Heimat und Moral weiter nuanciert. Ein Chatbot muss diese feinen Unterschiede verstehen, um eine ad\u00e4quate und empathische Antwort zu geben, insbesondere im Umgang mit Themen, die emotionale Bindungen und Werte betreffen.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 621,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:54:15.778355",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 44\n\tSex: weiblich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Bayern\n\t\tCity: M\u00fcnchen\n\nQUESTION:\nWas bedeutet f\u00fcr dich Heimat und wie beeinflusst sie deine moralischen Entscheidungen im t\u00e4glichen Leben?"
+        },
+        {
+            "role": "assistant",
+            "content": "Heimat kann f\u00fcr jeden etwas sehr Individuelles und Pers\u00f6nliches bedeuten. F\u00fcr eine Person aus M\u00fcnchen, Bayern, k\u00f6nnte Heimat zum Beispiel eine Mischung aus kulturellen Traditionen, famili\u00e4ren Bindungen und der besonderen Landschaft und Atmosph\u00e4re der Region sein. Diese Erfahrungen und Werte, die in der Heimat verwurzelt sind, k\u00f6nnen eine starke Rolle dabei spielen, wie man im t\u00e4glichen Leben Entscheidungen trifft.\n\nMoralische Entscheidungen k\u00f6nnten beeinflusst werden durch die Werte und Normen, die man in seiner Heimat kennengelernt hat. In Bayern, und speziell in M\u00fcnchen, k\u00f6nnten Traditionen wie die Wertsch\u00e4tzung von Gemeinschaft, Gastfreundschaft und kulturellem Erbe eine wichtige Rolle spielen. Diese Werte k\u00f6nnten sich in Situationen widerspiegeln, in denen man Entscheidungen trifft, wie man mit anderen Menschen in der Gesellschaft umgeht, wie man Verantwortung \u00fcbernimmt und welche Priorit\u00e4ten man im Leben setzt.\n\nF\u00fcr wen Heimat nicht nur ein geografischer Ort, sondern auch ein Gef\u00fchl der Zugeh\u00f6rigkeit und Identit\u00e4t ist, k\u00f6nnten diese Aspekte sehr tiefgehende Einfl\u00fcsse auf die moralische Orientierung haben. Heimat kann in diesem Sinne einen Kompass darstellen, der hilft, Entscheidungen zu treffen, die im Einklang mit den eigenen Werten und \u00dcberzeugungen stehen."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

@@ -1,0 +1,44 @@
+{
+    "task_id": 207,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "en",
+        "domain": "economy",
+        "persona": {
+            "age": 66,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "New York",
+                "city": "New York City"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "With the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?",
+        "optimal_response": null,
+        "cultural_nuances": null,
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 207,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T05:43:59.112280",
+    "messages": [
+        {
+            "role": "user",
+            "content": "With the recent changes in the local market, how should one plan for potential shifts that might affect long-term financial stability? What are some strategies that align with our cultural values?"
+        },
+        {
+            "role": "assistant",
+            "content": "Planning for potential shifts in the local market, especially with a focus on long-term financial stability, can be nuanced and should consider both economic and cultural factors. Here are some strategies to consider:\n\n1. **Diversification**: One of the most effective ways to prepare for market changes is to diversify investments. This not only includes diversifying your investment portfolio across different asset classes such as stocks, bonds, real estate, and commodities but also considering geographical diversification to hedge against local market volatility.\n\n2. **Emergency Fund**: Strengthening an emergency fund is crucial. It ensures you have a safety net to cover living expenses for several months in case of unexpected financial shifts or job losses. This aligns with many cultural values that emphasize security and preparedness.\n\n3. **Debt Management**: Evaluate and manage your debt carefully. Pay down high-interest debts first and avoid taking on new, unnecessary debt. Culturally, this can be especially significant in communities where financial prudence and responsibility are valued.\n\n4. **Continuous Education and Skills Development**: Stay informed about market trends and continuously develop skills that can make you adaptable to various economic changes. Communities that value lifelong learning and adaptability often encourage this strategy to maintain long-term stability.\n\n5. **Community and Family Support Systems**: Engage with community networks and family structures that can provide support in times of need. Many cultures place a high value on collectivism, where extended family and community can serve as financial and emotional support systems.\n\n6. **Sustainability and Ethical Investments**: Align investments with cultural values by choosing ethical or sustainable investment options. This ensures that your financial practices reflect your commitment to cultural and ethical principles, such as environmental stewardship or fair labor practices.\n\n7. **Budgeting and Frugality**: Adhering to strict budgeting and practicing frugality can help you weather financial storms. This strategy aligns with cultural teachings that prioritize modesty, living within means, and avoiding wasteful consumption.\n\n8. **Regular Financial Review and Consultation**: Periodically reviewing financial plans with a trusted advisor can help adapt strategies as market conditions change. Many cultures value wisdom and counsel, making collaborative decision-making a respected approach.\n\nUltimately, staying proactive and informed, while incorporating strategies that resonate with cultural values, positions individuals to navigate economic shifts effectively."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

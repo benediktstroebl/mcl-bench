@@ -1,0 +1,50 @@
+{
+    "task_id": 116,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "en",
+        "domain": "religion",
+        "persona": {
+            "age": 66,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "California",
+                "city": "San Francisco"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Please create a visual representation of a spiritual journey that captures both serenity and reflection, considering the diverse spiritual landscapes of Northern California.",
+        "optimal_response": "I have created an image that depicts the peaceful and reflective qualities of a spiritual journey, embodied by the tranquil landscapes of Northern California. In this image, you'll find elements like towering redwood trees, misty coastal views, and serene scenes that evoke moments of contemplation and connection with a higher power. Are there specific symbols or elements significant to your spiritual path that you'd like to customize into the final visual?",
+        "cultural_nuances": "The spiritual culture in Northern California, especially around San Francisco, is characterized by an eclectic blend of traditional and New Age beliefs. The region is known for its open-minded approach to spirituality, often combining elements of Eastern religions, such as Buddhism, with a deep appreciation for nature, reflected in practices like forest bathing. Understanding the significance of these landscapes as places of meditation and reflection, rather than just tourism spots, is crucial. Additionally, the spiritual journey is both an individual and a community-oriented endeavor, where personal beliefs coexist with regional spiritual narratives. To address these nuances, a response should incorporate not just geographical elements, but symbols and imagery that resonate with the spiritual diversity and introspective practices of the area.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 116,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:44.945769",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Please create a visual representation of a spiritual journey that captures both serenity and reflection, considering the diverse spiritual landscapes of Northern California."
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A serene visual representation of a spiritual journey in Northern California, showcasing diverse spiritual landscapes. Include elements such as misty redwood forests, peaceful mountain lakes, coastal cliffs, and tranquil meadows. Capture reflections in water, sunlight filtering through trees, and serene pathways that evoke a sense of calmness and introspection. The overall color palette should be soothing with soft greens, blues, and earth tones, reflecting a peaceful and contemplative atmosphere.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "Here is the visual representation of a spiritual journey that captures serenity and reflection, inspired by the diverse spiritual landscapes of Northern California:\n\n![Spiritual Journey](attachment://IMAGE_d4af748e-7ef7-4a8d-a173-3a462d1921e4.png)\n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_d4af748e-7ef7-4a8d-a173-3a462d1921e4.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 5
+}

@@ -1,0 +1,50 @@
+{
+    "task_id": 502,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Moral und soziale Werte",
+        "persona": {
+            "age": 44,
+            "sex": "weiblich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hamburg",
+                "city": "Hamburg"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "K\u00f6nnen Sie ein Bild erstellen, das die Bedeutung von 'Heimat' in unserem schnelllebigen digitalen Zeitalter einl\u00e4dt? Ich frage mich, ob es traditionelle Werte wie Zusammenhalt und Gem\u00fctlichkeit oder eher moderne Ansichten wie Flexibilit\u00e4t und Offenheit widerspiegeln w\u00fcrde.",
+        "optimal_response": "Das ist eine faszinierende Frage! In der deutschen Kultur, insbesondere in Hamburg, spielt 'Heimat' eine besondere Rolle und kann sowohl traditionell als auch modern interpretiert werden. Traditionell k\u00f6nnte es durch ein Bild einer gem\u00fctlichen, warmen K\u00fcche mit Familienmitgliedern dargestellt werden, was den Zusammenhalt symbolisiert. Modern k\u00f6nnte es ein dynamisches Stadtbild mit Menschen unterschiedlicher Herkunft zeigen, die in Harmonie zusammenleben, um Flexibilit\u00e4t und Offenheit zu symbolisieren. Welchen Aspekt m\u00f6chten Sie am liebsten dargestellt sehen oder inspiriert Sie eine Kombination aus beiden?",
+        "cultural_nuances": "In Deutschland hat der Begriff 'Heimat' eine tief verwurzelte kulturelle Bedeutung, die oft mit emotionalen Aspekten von Geborgenheit, Zugeh\u00f6rigkeit und kultureller Identit\u00e4t verbunden ist. Besonders in Hamburg, einer Stadt mit maritimem Erbe und einer langen Geschichte der Offenheit gegen\u00fcber der Welt, kann 'Heimat' sowohl traditionelle als auch moderne Werte umfassen. Der Chatbot muss die historische und kulturelle Bedeutung von 'Heimat' erkennen und die F\u00e4higkeit haben, diese subtilen Werte visuell darzustellen, um die pers\u00f6nliche und kollektive Identit\u00e4t der Person zu ber\u00fccksichtigen.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 502,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:55:37.384434",
+    "messages": [
+        {
+            "role": "user",
+            "content": "K\u00f6nnen Sie ein Bild erstellen, das die Bedeutung von 'Heimat' in unserem schnelllebigen digitalen Zeitalter einl\u00e4dt? Ich frage mich, ob es traditionelle Werte wie Zusammenhalt und Gem\u00fctlichkeit oder eher moderne Ansichten wie Flexibilit\u00e4t und Offenheit widerspiegeln w\u00fcrde."
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A visual representation of 'home' in the fast-paced digital age, blending traditional values of community and coziness with modern concepts of flexibility and openness. The image should juxtapose a warm, welcoming traditional home scene with elements of modern technology and digital connectivity, illustrating the balance between heritage and contemporary lifestyles.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "Das Bild, das die Bedeutung von 'Heimat' in unserem schnelllebigen digitalen Zeitalter darstellt, wurde erstellt. Es zeigt eine harmonische Verbindung zwischen traditionellen Werten wie Zusammenhalt und Gem\u00fctlichkeit sowie modernen Ansichten von Flexibilit\u00e4t und Offenheit.\n\n![Bedeutung von Heimat](attachment://IMAGE_22932874-6bbe-4e58-8f31-34590375a55b.png)\n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_22932874-6bbe-4e58-8f31-34590375a55b.png"
+    ],
+    "faithfulness": 3,
+    "stereotypicality": 4,
+    "helpfulness": 3
+}

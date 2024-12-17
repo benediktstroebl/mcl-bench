@@ -1,0 +1,44 @@
+{
+    "task_id": 210,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "en",
+        "domain": "economy",
+        "persona": {
+            "age": 66,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "New Mexico",
+                "city": "Albuquerque"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "How do you perceive the changes in the market when it comes to local small businesses, given the recent economic shifts, and do you think there's a connection to our community traditions and values?",
+        "optimal_response": null,
+        "cultural_nuances": null,
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 210,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T05:25:54.864440",
+    "messages": [
+        {
+            "role": "user",
+            "content": "How do you perceive the changes in the market when it comes to local small businesses, given the recent economic shifts, and do you think there's a connection to our community traditions and values?"
+        },
+        {
+            "role": "assistant",
+            "content": "The economic landscape for local small businesses has been influenced by several recent shifts that are affecting how these businesses operate and thrive. There are a few key areas to consider, as well as their potential connections to community traditions and values.\n\n1. **Emphasis on Local and Sustainable Products**: With increasing awareness of environmental issues and a focus on sustainability, many consumers are prioritizing local products. This trend supports small businesses that source and sell locally, as community members often prefer to support vendors who offer locally made or grown products. This shift aligns well with community values that emphasize sustainability and reducing environmental impact.\n\n2. **Digital Transformation**: Many small businesses have had to pivot towards digital platforms for sales, marketing, and operations due to the pandemic and ongoing technological advances. While this transition can pose challenges, it also provides opportunities for small businesses to reach broader audiences beyond their immediate geographic area. This can sometimes create tension with traditional community-centered business practices, but it also allows for new ways to engage with and support the local economy.\n\n3. **Focus on Community and Personal Connection**: Despite the push towards digital, there's been a strong counter-trend in favor of maintaining personal connections and community involvement. Small businesses often play a crucial role in community gatherings, events, and initiatives. People frequently value the personalized service and familiarity they receive from small businesses, which reflects broader community traditions of close-knit relationships and support for local enterprises.\n\n4. **Resilience and Adaptability**: Economic challenges, such as inflation and supply chain issues, have tested the resilience of small businesses. Many have shown remarkable adaptability, which often stems from their intrinsic connection to the community. Businesses that align with local values, like inclusivity, innovation, and responsiveness to community needs, tend to fare better in navigating economic challenges.\n\n5. **Cultural Preservation and Innovation**: Small businesses often serve as custodians of cultural heritage, whether through cuisine, artisan crafts, or other local services. By integrating traditional elements with modern demands and innovation, these businesses can both preserve and evolve community customs, fostering a sense of continuity and modern relevance.\n\nIn summary, while economic shifts present challenges, they also offer opportunities for small businesses to reinforce their connection to community traditions and values. Those that successfully navigate these changes can not only survive but enhance their role within the community fabric."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

@@ -1,0 +1,44 @@
+{
+    "task_id": 674,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Wirtschaft",
+        "persona": {
+            "age": 66,
+            "sex": "m\u00e4nnlich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hessen",
+                "city": "Frankfurt am Main"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Wie sehen Sie die derzeitige wirtschaftliche Lage und deren Auswirkungen auf den Mittelstand, insbesondere in Hessen, angesichts der steigenden Energiepreise und der Globalisierung?",
+        "optimal_response": "Die derzeitige wirtschaftliche Lage ist f\u00fcr den Mittelstand in Hessen herausfordernd, besonders wegen der steigenden Energiepreise, die die Produktionskosten erh\u00f6hen. Die Globalisierung bietet sowohl Chancen als auch Risiken. Sollten Ihrer Meinung nach spezifische regionale Strategien entwickelt werden, um diese Herausforderungen zu meistern, oder glauben Sie, dass eine national abgestimmte L\u00f6sung effektiver w\u00e4re? Zudem, wie sch\u00e4tzen Sie die Rolle von Investitionen in Nachhaltigkeit und Technologien f\u00fcr den Mittelstand in dieser Situation ein?",
+        "cultural_nuances": "In der deutschen Wirtschaft spielen der Mittelstand (oft auch als \u201eMittelstand\u201c bezeichnet) und seine Rolle f\u00fcr die Stabilit\u00e4t des Arbeitsmarktes und die wirtschaftliche St\u00e4rke eine zentrale Rolle. Die lokale Verbindung in Hessen, speziell in Frankfurt am Main, als Finanzzentrum Europas, gibt der Frage eine besondere Dringlichkeit. Der Fokus auf die Auswirkungen der Energiepreise und der Globalisierung zeigt, dass der Fragesteller sich Sorgen um die langfristige Wettbewerbsf\u00e4higkeit und Nachhaltigkeit des Mittelstandes macht. Um diese Bedenken ad\u00e4quat zu adressieren, sollte der Chatbot die Bedeutung des Mittelstands in der deutschen Wirtschaftskultur und die spezifischen wirtschaftlichen Herausforderungen in der Region nachvollziehen k\u00f6nnen. Des Weiteren muss Verst\u00e4ndnis f\u00fcr die komplexe Dynamik zwischen lokalen und globalen wirtschaftlichen Faktoren vorhanden sein.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 674,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:52:33.581895",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 66\n\tSex: m\u00e4nnlich\n\tLanguage: de\n\tNationality:\n\t\tCountry: Deutschland\n\t\tState: Hessen\n\t\tCity: Frankfurt am Main\n\nQUESTION:\nWie sehen Sie die derzeitige wirtschaftliche Lage und deren Auswirkungen auf den Mittelstand, insbesondere in Hessen, angesichts der steigenden Energiepreise und der Globalisierung?"
+        },
+        {
+            "role": "assistant",
+            "content": "Die aktuelle wirtschaftliche Lage ist zweifellos herausfordernd, insbesondere f\u00fcr den Mittelstand in Hessen und ganz Deutschland. Die steigenden Energiepreise sind ein bedeutender Belastungsfaktor, da sie die Betriebskosten f\u00fcr viele Unternehmen erh\u00f6hen. Dies betrifft insbesondere Branchen, die stark von Energiekosten abh\u00e4ngig sind, wie etwa die produzierende Industrie oder das Transportwesen.\n\nF\u00fcr den hessischen Mittelstand, der traditionell ein R\u00fcckgrat der Wirtschaft darstellt, bedeutet dies, dass Effizienzsteigerung und Kosteneinsparung noch mehr an Bedeutung gewinnen. Unternehmen m\u00fcssen m\u00f6glicherweise ihre Gesch\u00e4ftsmodelle anpassen, um wettbewerbsf\u00e4hig zu bleiben. Investitionen in energieeffiziente Technologien und nachhaltige Energiequellen k\u00f6nnten hier langfristig Abhilfe schaffen und die Abh\u00e4ngigkeit von volatilen Energiepreisen mindern.\n\nDie Globalisierung bringt sowohl Herausforderungen als auch Chancen mit sich. W\u00e4hrend sie zus\u00e4tzlichen Wettbewerb aus dem Ausland erzeugt, er\u00f6ffnet sie gleichzeitig auch neue M\u00e4rkte f\u00fcr hessische Unternehmen. Der Zugang zu internationalen M\u00e4rkten kann zu einer Diversifizierung von Einkommensquellen f\u00fchren und helfen, Risiken zu streuen.\n\nEs ist von entscheidender Bedeutung, dass die Politik Rahmenbedingungen schafft, die den Mittelstand unterst\u00fctzen. Dazu geh\u00f6ren Ma\u00dfnahmen zur F\u00f6rderung von Innovation, zur Unterst\u00fctzung bei der Digitalisierung und zur Erleichterung des Zugangs zu Finanzierungen. Eine verst\u00e4rkte Zusammenarbeit zwischen Unternehmen, Forschungseinrichtungen und der \u00f6ffentlichen Hand kann dabei helfen, den Strukturwandel erfolgreich zu gestalten.\n\nInsgesamt ist es wichtig, die aktuellen wirtschaftlichen Herausforderungen als Chance zur Anpassung und Weiterentwicklung zu sehen, um auch zuk\u00fcnftig erfolgreich am Markt bestehen zu k\u00f6nnen."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 4,
+    "helpfulness": 4
+}

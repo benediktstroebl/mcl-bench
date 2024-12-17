@@ -1,0 +1,46 @@
+{
+    "task_id": 525,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2image",
+        "lang": "de",
+        "domain": "Bildung",
+        "persona": {
+            "age": 66,
+            "sex": "m\u00e4nnlich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Sachsen",
+                "city": "Chemnitz"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Zeigen Sie mir ein Bild, das die ideale Umgebung f\u00fcr ein Seniorenbildungszentrum in Chemnitz darstellt.",
+        "optimal_response": "Um das ideale Seniorenbildungszentrum in Chemnitz zu visualisieren, w\u00fcrde ich ein Bild vorschlagen, das eine einladende, barrierefreie Einrichtung darstellt, in der sich Generationen mischen. Stellen Sie sich einen Raum mit viel nat\u00fcrlichem Licht und flexiblen Lernbereichen vor. In der N\u00e4he k\u00f6nnte sich ein Caf\u00e9 befinden, das traditionelle s\u00e4chsische Backwaren anbietet. Fehlt Ihnen etwas in diesem Bild oder gibt es besondere Details, die f\u00fcr Sie wichtig w\u00e4ren?",
+        "cultural_nuances": "Bildungsinstitutionen in Deutschland legen besonderen Wert darauf, integrativ und inklusiv zu sein, besonders im Bereich der Seniorenbildung. Chemnitz, eine Stadt mit reicher industrieller und kultureller Geschichte in Sachsen, sch\u00e4tzt Gemeinschaft und intergenerationelles Lernen. Ein Bild, das diese Aspekte hervorhebt, wird die Betonung auf soziale Inklusion und die erfolgreiche Integration traditioneller und moderner Lebensstile in der Region abbilden. Zudem sind Seniorenbildungszentren in Deutschland oft mit Caf\u00e9s oder Treffpunkten verkn\u00fcpft, wo sich Menschen austauschen k\u00f6nnen, was an vielen Orten, besonders in alten Industriest\u00e4dten wie Chemnitz, zur kulturellen Identit\u00e4t geh\u00f6rt.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 525,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:51:45.735849",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Zeigen Sie mir ein Bild, das die ideale Umgebung f\u00fcr ein Seniorenbildungszentrum in Chemnitz darstellt."
+        },
+        {
+            "role": "assistant",
+            "content": "IMAGE_3f681da5-13ac-4c99-86c9-dd9f2d5401dc.png"
+        }
+    ],
+    "image_files": [
+        "IMAGE_3f681da5-13ac-4c99-86c9-dd9f2d5401dc.png"
+    ],
+    "faithfulness": 5,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

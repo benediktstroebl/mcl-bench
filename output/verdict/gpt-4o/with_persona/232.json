@@ -1,0 +1,44 @@
+{
+    "task_id": 232,
+    "evaluation_type": "persona",
+    "task": {
+        "modality": "text2text",
+        "lang": "en",
+        "domain": "religion",
+        "persona": {
+            "age": 44,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "New York",
+                "city": "New York City"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Could you tell me what one might traditionally serve on a table for a Sunday brunch after a church service in the South?",
+        "optimal_response": null,
+        "cultural_nuances": null,
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 232,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T05:26:17.452426",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Given the following details about the user, please respond to the question below:\n\nUSER INFORMATION:\n\n\tAge: 44\n\tSex: female\n\tLanguage: en\n\tNationality:\n\t\tCountry: United States\n\t\tState: New York\n\t\tCity: New York City\n\nQUESTION:\nCould you tell me what one might traditionally serve on a table for a Sunday brunch after a church service in the South?"
+        },
+        {
+            "role": "assistant",
+            "content": "For a traditional Southern Sunday brunch after church, you might find a delightful spread that includes a variety of classic dishes. Here are some common items you might consider:\n\n1. **Biscuits and Gravy**: Fluffy buttermilk biscuits served with creamy sausage gravy.\n2. **Fried Chicken**: A staple in Southern cuisine, often served cold at brunch.\n3. **Deviled Eggs**: A savory and creamy treat that is a must at any Southern gathering.\n4. **Grits**: Creamy hominy grits, sometimes served with cheese or shrimp.\n5. **Pancakes or Waffles**: Often accompanied by butter, syrup, or fruit toppings.\n6. **Southern-style Eggs Benedict**: Made with country ham or pulled pork on a biscuit, topped with hollandaise sauce.\n7. **Fresh Fruit**: Seasonal fruits, such as melons, berries, and peaches.\n8. **Cornbread or Muffins**: Sweet or savory, pairs well with the other brunch dishes.\n9. **Collard Greens or Green Beans**: Often cooked with bacon or ham for flavor.\n10. **Pecan Pie or Peach Cobbler**: A sweet ending to the brunch, showcasing classic Southern desserts.\n11. **Sweet Tea or Iced Tea**: A quintessential Southern beverage option.\n\nThese dishes reflect the hearty and comforting nature of Southern hospitality and cuisine, making Sunday brunch a memorable and satisfying meal."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 3,
+    "helpfulness": 4
+}

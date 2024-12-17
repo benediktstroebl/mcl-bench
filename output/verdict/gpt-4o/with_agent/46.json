@@ -1,0 +1,50 @@
+{
+    "task_id": 46,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "en",
+        "domain": "education",
+        "persona": {
+            "age": 25,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "California",
+                "city": "San Francisco"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Can you create a visual representation of the phrase 'You can't unscramble the eggs' that encapsulates its cultural meaning?",
+        "optimal_response": "Here's an illustration showing eggs being cooked, symbolizing the idea that once certain actions or decisions are taken, they cannot be undone. This reflects the irreversible nature of some life choices. Is there a specific context or example where you felt this applies?",
+        "cultural_nuances": "The phrase 'You can't unscramble the eggs' is an idiomatic expression in American English, often used to convey the message that some actions cannot be reversed. In the context of education, it can relate to decisions about career paths or educational pursuits where one must accept the consequences of choices. A faithful response would recognize the metaphor's implications of permanence and consequence, possibly integrating elements of personal growth or acceptance, which are culturally relevant sentiments within American self-improvement and educational narratives.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 46,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:10.929009",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Can you create a visual representation of the phrase 'You can't unscramble the eggs' that encapsulates its cultural meaning?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A whimsical illustration depicting a broken egg with scrambled eggs spilling out of it. Surrounding the egg are symbolic representations of choices and consequences, such as a fork in the road, a clock representing time passing, and an open book symbolizing knowledge and wisdom. The background is colorful and playful, emphasizing the idea that certain actions can't be reversed, capturing the essence of the phrase 'You can't unscramble the eggs'.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "I have created a visual representation of the phrase \"You can't unscramble the eggs.\" You can view the illustration [here](sandbox:/IMAGE_8bae7957-42f2-473c-8459-c63e1e51f84b.png). \n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_8bae7957-42f2-473c-8459-c63e1e51f84b.png"
+    ],
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

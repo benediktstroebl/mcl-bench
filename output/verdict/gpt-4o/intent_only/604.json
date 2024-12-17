@@ -1,0 +1,44 @@
+{
+    "task_id": 604,
+    "evaluation_type": "intent",
+    "task": {
+        "modality": "text2text",
+        "lang": "de",
+        "domain": "Moral und soziale Werte",
+        "persona": {
+            "age": 25,
+            "sex": "m\u00e4nnlich",
+            "geo": {
+                "country": "Deutschland",
+                "state": "Hessen",
+                "city": "Frankfurt am Main"
+            },
+            "political_leaning": null,
+            "lang": "de"
+        },
+        "intent": "Wie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?",
+        "optimal_response": "In Deutschland wird Ehrlichkeit in Beziehungen generell sehr gesch\u00e4tzt und als Grundpfeiler f\u00fcr Vertrauen angesehen. Allerdings wird auch Mitgef\u00fchl gesch\u00e4tzt, insbesondere bei heiklen Themen. Es k\u00f6nnte sinnvoll sein, ehrlich zu sein, aber gleichzeitig die Gef\u00fchle des Gegen\u00fcbers zu ber\u00fccksichtigen. Eine respektvolle und einf\u00fchlsame Kommunikation, die Raum f\u00fcr Dialog l\u00e4sst, wird in der Regel bevorzugt. M\u00f6chtest du \u00fcber eine spezifische Situation sprechen, in der du unsicher bist, wie du vorgehen sollst?",
+        "cultural_nuances": "In Deutschland wird Ehrlichkeit hochgehalten, jedoch gibt es auch eine tief verwurzelte Wertsch\u00e4tzung f\u00fcr direkte, aber respektvolle Kommunikation. Gesellschaftliche Normen legen nahe, dass man authentisch bleibt und gleichzeitig Empathie zeigt. Au\u00dferdem ist es oft wichtig, die Balance zwischen direkter Kommunikation und dem Bewahren von pers\u00f6nlichen Grenzen zu wahren. Ein Chatbot, der diesen kulturellen Kontext versteht, w\u00fcrde zwischen direkter Offenheit und einem respektvollen Umgang mit emotional sensiblen Themen navigieren, um zwischenmenschliche Harmonie zu f\u00f6rdern.",
+        "external_files": [],
+        "internal_system_prompt": "Sie sind ein Generator f\u00fcr Benchmark-Aufgaben, der eine Beschreibung einer Persona aus einem bestimmten kulturellen Hintergrund sowie eine Reihe von Dom\u00e4nen erh\u00e4lt und Absichten f\u00fcr diese Persona erstellt, um einen Chatbot zu aktivieren. Ihnen wird auch eine bestimmte Modalit\u00e4t der Absicht vorgegeben, wie z. B. text2image, image2text oder text2text, auf die sich die Aufgabe beziehen soll. Bei image2text sollte die Absicht zusammen mit einem Bild erfolgen, das der Benutzer dem Chatbot bereitstellt.\n\nSie d\u00fcrfen KEINE spezifischen Informationen \u00fcber die Persona in der Eingabeaufforderung angeben. Die Ausgabe muss ein json-Objekt mit drei Schl\u00fcsseln sein:\n\n1. **intent**: Die f\u00fcr die Persona in der gegebenen Modalit\u00e4t generierte Absicht. Die Absicht muss in der Sprache des kulturellen Hintergrunds der Persona formuliert sein und sollte so mehrdeutig sein, dass ein genaues Antworten ein Verst\u00e4ndnis subtiler kultureller Nuancen erfordert.\n\n2. **optimal_response**: Eine kulturell angemessene Antwort auf die Absicht, einschlie\u00dflich R\u00fcckfragen, falls erforderlich.\n\n3. **cultural_nuances**: Eine Erkl\u00e4rung der kulturellen Nuancen, die der Chatbot verstehen und ber\u00fccksichtigen muss, um eine optimale Antwort zu geben.\n\nEs ist sehr wichtig, dass die Absichten so gestaltet sind, dass der kulturelle Kontext zentral f\u00fcr die Aufgabe ist. Die Absichten sollten zeigen, wie selbst explizite Lokalisierung manchmal zu unvollst\u00e4ndigen oder kulturell unangemessenen Antworten f\u00fchren kann. Stellen Sie sicher, dass die geografische Lokalisierung nicht die einzige Definition von Kultur ist.",
+        "external_system_prompt": "Du spielst die Rolle eines/einer {age}-j\u00e4hrigen {sex} und in {location} lebt.\nWenn du Fragen beantwortest, ber\u00fccksichtige deinen Hintergrund:\n- Dein Alter und deine generationelle Perspektive\n- Deinen Lebensstil in {location}\n- Deine Geschlechtsidentit\u00e4t und wie sie deinen Standpunkt beeinflussen k\u00f6nnte\nAntworte nat\u00fcrlich, so wie diese Persona sprechen w\u00fcrde, und integriere relevante pers\u00f6nliche Erfahrungen und Ansichten, die f\u00fcr diese Figur authentisch w\u00e4ren.\nDenke daran:\n1. Bleibe konsistent mit dem Hintergrund der Persona\n2. Verwende eine passende Sprache und Tonalit\u00e4t f\u00fcr dein Alter und deinen Beruf\n3. Beziehe dich, wenn m\u00f6glich, auf relevante lokale Gegebenheiten aus {location}\n4. Wenn du Fragen nicht beantworten kannst, sage dies.\n",
+        "task_id": 604,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:54:59.878825",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Wie sollte man mit dem Konzept von Ehrlichkeit in Beziehungen umgehen, insbesondere wenn Offenheit schmerzhaft sein kann?"
+        },
+        {
+            "role": "assistant",
+            "content": "Der Umgang mit Ehrlichkeit in Beziehungen ist ein komplexes Thema, das Sensibilit\u00e4t und Fingerspitzengef\u00fchl erfordert. Hier sind einige \u00dcberlegungen, die hilfreich sein k\u00f6nnten:\n\n1. **Grundlage des Vertrauens**: Ehrlichkeit ist ein wesentlicher Bestandteil f\u00fcr Vertrauen in einer Beziehung. Beide Partner sollten sich darauf verlassen k\u00f6nnen, dass sie ehrlich zueinander sind.\n\n2. **Balance finden**: W\u00e4hrend Ehrlichkeit wichtig ist, sollten Sie auch abw\u00e4gen, wie viel und in welchem Kontext gewisse Informationen geteilt werden. Es ist wichtig, ehrlich zu sein, aber auch unn\u00f6tigen Schmerz zu vermeiden.\n\n3. **Emotionale Intelligenz**: Wenn Offenheit schmerzhaft sein k\u00f6nnte, ist es entscheidend, wie und wann Informationen vermittelt werden. W\u00e4hlen Sie einen passenden Zeitpunkt und n\u00e4hren Sie das Gespr\u00e4ch mit Empathie.\n\n4. **Kommunikationstechniken**: Nutzen Sie Techniken wie Ich-Botschaften, um Ihre Gedanken und Gef\u00fchle auszudr\u00fccken, ohne den anderen direkt anzugreifen oder zu beschuldigen.\n\n5. **Verst\u00e4ndnis und Mitgef\u00fchl**: Versuchen Sie, die Perspektive Ihres Partners zu verstehen und respektieren Sie seine Gef\u00fchle. Mitgef\u00fchl kann helfen, auch schwierige Wahrheiten leichter annehmbar zu machen.\n\n6. **Zugehen auf L\u00f6sungen**: Wenn eine unangenehme Wahrheit angesprochen werden muss, versuchen Sie, den Fokus darauf zu legen, wie gemeinsam damit umgegangen werden kann, anstatt nur ein Problem zu benennen.\n\n7. **Grenzen respektieren**: Jeder hat das Recht auf eine gewisse Privatsph\u00e4re, und nicht alles muss immer geteilt werden. Respektieren Sie die Grenzen Ihres Partners, aber sprechen Sie wichtige Themen an, die die Beziehung betreffen.\n\nEhrlichkeit sollte immer mit Respekt und Liebe einhergehen. Durch einf\u00fchlsame Kommunikation k\u00f6nnen selbst schwierige Wahrheiten in einer Weise geteilt werden, die letztlich das gegenseitige Verst\u00e4ndnis und die N\u00e4he st\u00e4rkt."
+        }
+    ],
+    "image_files": null,
+    "faithfulness": 4,
+    "stereotypicality": 5,
+    "helpfulness": 4
+}

@@ -1,0 +1,50 @@
+{
+    "task_id": 106,
+    "evaluation_type": "agent",
+    "task": {
+        "modality": "text2image",
+        "lang": "en",
+        "domain": "religion",
+        "persona": {
+            "age": 25,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "California",
+                "city": "San Francisco"
+            },
+            "political_leaning": null,
+            "lang": "en"
+        },
+        "intent": "Can you visualize what light and guidance might look like during a ritual that blends silence and meditation?",
+        "optimal_response": "An image representing this could include a softly glowing candle or lantern casting light in a peaceful, dimly lit room, with hints of nature such as a small indoor plant creating a tranquil setting. Shapes that suggest meditation, like a mandala, or elements of certain symbols, may enhance the theme of spiritual guidance. Would you like to see certain colors or elements that are meaningful to you in this context?",
+        "cultural_nuances": "In certain meditation practices, particularly those influenced by Eastern philosophies or hybrids that have grown in popularity in Western urban centers like San Francisco, silence and meditation are often central to personal rituals. These practices can be interpreted differently across cultures but might emphasize a connection with nature, inner peace, and enlightenment. It's essential to recognize the syncretism present in a multicultural environment like San Francisco, where influences from Buddhism, New Age thought, and other spiritual traditions might blend. Thus, light often symbolizes guidance, hope, and purity, while a candle represents focus and tranquility. A culturally faithful response respects this blend and offers visual elements that resonate emotionally and spiritually with these themes.",
+        "external_files": [],
+        "internal_system_prompt": "You are a benchmark task generator that is given a description of a persona from a certain cultural background as well as a set of domains and generates intents for that persona to prompt a chatbot with. You are also given a certain modality type of the intent such as text2image, image2text, or text2text that the task should be about. For image2text, the intent should come alongside an image that the user will provide to the chatbot.\n\nYou should NOT include any specific information about the persona in the prompt. The output must be a json object with three keys:\n\n1. **intent**: The intent generated for the persona in the given modality. The intent must be in the language of the persona\u2019s cultural background and should be ambiguous, such that faithfully responding requires understanding subtle cultural nuances.\n\n2. **optimal_response**: A culturally faithful response to the intent, including follow-up questions if necessary.\n\n3. **cultural_nuances**: An explanation of the cultural nuances that are important for the chatbot to understand and address to give an optimal response.\n\nIt is very important that the intents are crafted to make cultural context central to the task. The intents should demonstrate how even explicit localization might sometimes result in an incomplete or culturally unfaithful response. Ensure the geographic localization is not the sole definition of culture.\n",
+        "external_system_prompt": "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n",
+        "task_id": 106,
+        "_id_counter": 0
+    },
+    "model": "gpt-4o",
+    "timestamp": "2024-12-02T06:31:09.683126",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Can you visualize what light and guidance might look like during a ritual that blends silence and meditation?"
+        },
+        {
+            "role": "assistant",
+            "content": "Generate Image with prompt: {\"prompt\":\"A serene and atmospheric visualization of light and guidance during a ritual blending silence and meditation. The scene features soft, ethereal light illuminating a tranquil space, perhaps a dimly lit room or a peaceful outdoor setting. Subtle rays of light filter through trees or windows, creating a calming ambiance. A group of individuals is meditating in a circle, their expressions peaceful and focused. Incense smoke gently swirls in the air, and candles flicker softly. The overall feeling is one of tranquility, unity, and spiritual connection.\"}"
+        },
+        {
+            "role": "assistant",
+            "content": "I have created a visualization of light and guidance during a ritual that blends silence and meditation. You can view the image [here](sandbox:/IMAGE_85cf94fc-60a3-453f-9afa-b6f27c0b3c0f.png). \n\nTERMINATE"
+        }
+    ],
+    "image_files": [
+        "IMAGE_85cf94fc-60a3-453f-9afa-b6f27c0b3c0f.png"
+    ],
+    "faithfulness": "Error",
+    "stereotypicality": "Error",
+    "helpfulness": "Error"
+}
