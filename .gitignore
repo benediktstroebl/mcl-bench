@@ -1,5 +1,9 @@
 .cache/**
 **/__pycache__/**
 .env
+<<<<<<< HEAD
 output/*
 *.png
+=======
+old/*
+>>>>>>> 59df60b9eaab084af462d192b4a7583f408515b2
