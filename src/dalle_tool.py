@@ -4,6 +4,7 @@ from typing import Optional, Literal
 from phi.tools import Toolkit
 from phi.utils.log import logger
 import uuid
+import os
 
 try:
     from openai import OpenAI
@@ -63,13 +64,17 @@ class DalleTool(Toolkit):
             
             # write b64 image under unique id and return id
             image_id = str(uuid.uuid4())
-            image_path = f"IMAGE_{image_id}.png"
+            
+            # create output directory if it doesn't exist
+            os.makedirs("output/dall-e-3", exist_ok=True)
+            
+            image_path = f"output/dall-e-3/IMAGE_{image_id}.png"
             with open(image_path, "wb") as f:
                 # Decode base64 string to bytes before writing
                 import base64
                 image_bytes = base64.b64decode(response.data[0].b64_json)
                 f.write(image_bytes)
-            return image_path
+            return f"IMAGE_{image_id}.png"
             
         except Exception as e:
             logger.error(f"Failed to generate image: {e}")

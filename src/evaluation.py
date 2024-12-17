@@ -92,7 +92,7 @@ class EvaluationPipeline:
         
         if task.modality in ['text2image', 'image2image']:
             # Use image generation agent
-            messages = get_image_gen_agent(task.intent).get_chat_history()
+            messages = get_image_gen_agent(task.intent, self.model).get_chat_history()
             messages = json.loads(messages)
             response = messages[-1]['content']
         else:
@@ -125,12 +125,12 @@ class EvaluationPipeline:
         else:
             filtered_persona = task.persona
 
-        context = get_persona_context_prompt(filtered_persona, task.intent, task.lang)
+        context = task.prompt_with_persona()
         messages = []
         
         if task.modality in ['text2image', 'image2image']:
             # Use image generation agent with persona context
-            messages = get_image_gen_agent(context).get_chat_history()
+            messages = get_image_gen_agent(context, self.model).get_chat_history()
             messages = json.loads(messages)
             response = messages[-1]['content']
         else:
@@ -148,6 +148,7 @@ class EvaluationPipeline:
         """Setting 3: Evaluate using the agent with user interaction."""
         messages = await run_agent_evaluation(task)
         self._save_result(self.agent_dir, task, messages)
+        
         return messages
 
     def _get_model_response(self, messages: List[Dict]) -> str:
@@ -177,11 +178,16 @@ class EvaluationPipeline:
             for message in messages:
                 if message["role"] == "assistant":
                     content = message["content"]
-                    # Look for IMAGE_ pattern in the response
-                    words = content.split()
-                    for word in words:
-                        if word.startswith("IMAGE_") and word.endswith(".png"):
-                            image_files.append(word)
+                    # Look for IMAGE_ pattern in the response using regex
+                    import re
+                    matches = re.finditer(r'IMAGE_[a-zA-Z0-9-]+\.png', content)
+                    for match in matches:
+                        image_file = match.group()
+                        # Remove any markdown or URL formatting
+                        image_file = re.sub(r'[(\[\])]', '', image_file)
+                        image_file = image_file.split('/')[-1]  # Get just filename
+                        if image_file not in image_files:  # Avoid duplicates
+                            image_files.append(image_file)
         
         result = {
             "task_id": task.task_id,
@@ -286,7 +292,9 @@ class EvaluationPipeline:
                     external_files=task_data['external_files'],
                     internal_system_prompt=task_data['internal_system_prompt'],
                     external_system_prompt=task_data['external_system_prompt'],
-                    task_id=task_data['task_id']
+                    task_id=task_data['task_id'],
+                    cultural_nuances=task_data.get('cultural_nuances'),
+                    optimal_response=task_data.get('optimal_response')
                 )
                 
                 if task.intent:  # Only add tasks with intent
@@ -298,9 +306,13 @@ class EvaluationPipeline:
             except Exception as e:
                 pbar.write(f"Error creating task object: {str(e)}")
                 pbar.update(3)
-        
+                
+        # shuffle tasks
+        import random
+        random.seed(42)  # Set fixed seed for reproducibility
+        random.shuffle(tasks)
         # Create tasks for concurrent execution
-        evaluation_tasks = [self._evaluate_task(task, pbar) for task in tasks]
+        evaluation_tasks = [self._evaluate_task(task, pbar) for task in tasks[:20]]
         
         # Run tasks concurrently
         await asyncio.gather(*evaluation_tasks)
@@ -311,11 +323,11 @@ class EvaluationPipeline:
 async def main():
     # Example usage with resume functionality
     pipeline = EvaluationPipeline(
-        model="gpt-4o-mini", 
-        max_concurrent=3,
-        resume_timestamp=None
+        model="gpt-4o", 
+        max_concurrent=5,
+        resume_timestamp="20241202_052310"
     )
-    await pipeline.evaluate_tasks_from_file("data/tasks_with_intents/gpt-4o/en_tasks.json")
+    await pipeline.evaluate_tasks_from_file("data/tasks_with_intents/gpt-4o/ru_tasks.json")
 
 if __name__ == "__main__":
     asyncio.run(main()) 

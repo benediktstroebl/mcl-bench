@@ -12,7 +12,17 @@ from autogen_core.base import CancellationToken
 import litellm
 import os
 from src.tasks import Persona, Geo, Task
+from dalle_tool import DalleTool
 from typing import List, Dict
+from openai import OpenAI
+import uuid
+from openai import AsyncOpenAI
+
+import os
+
+
+
+
 
 load_dotenv()
 
@@ -22,35 +32,67 @@ DEFAULT_MODEL = "gpt-4o-mini"
 # Create a class to hold the current configuration
 class AgentConfig:
     def __init__(self):
-        self.persona = None
+        self.user_prompt = None
         self.model = DEFAULT_MODEL
 
 # Create a global instance
 config = AgentConfig()
 
-def set_persona(persona: Persona):
-    """Set the persona for the agent configuration"""
-    config.persona = persona
 
 async def ask_user(question: str) -> str:
-    if config.persona is None:
+    if config.user_prompt is None:
         raise ValueError("Persona not set. Please call set_persona() before using ask_user")
-    
-    system_prompt = get_persona_prompt(config.persona)
-    
+
+
     response = await acompletion(
         model=config.model,
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": config.user_prompt},
             {"role": "user", "content": question}
         ]
     )
     return response.choices[0].message.content
 
+
+async def generate_image(prompt: str) -> str:
+
+    try:
+        client = AsyncOpenAI()
+        response = await client.images.generate(
+            prompt=prompt,
+            model="dall-e-3",
+            n=1,
+            quality="standard",
+            response_format="b64_json",
+            size="1024x1024",
+            style="vivid",
+        )
+        
+        # write b64 image under unique id and return id
+        image_id = str(uuid.uuid4())
+        
+        # create output directory if it doesn't exist
+        os.makedirs("output/dall-e-3", exist_ok=True)
+        
+        image_path = f"output/dall-e-3/IMAGE_{image_id}.png"
+        with open(image_path, "wb") as f:
+            # Decode base64 string to bytes before writing
+            import base64
+            image_bytes = base64.b64decode(response.data[0].b64_json)
+            f.write(image_bytes)
+        return f"IMAGE_{image_id}.png"
+        
+    except Exception as e:
+        return f"Error: {e}"
+    
+
+
+def set_persona(prompt: str):    
+    config.user_prompt = prompt
+
 async def run_agent_evaluation(task: Task) -> List[Dict]:
     """Run agent evaluation with a given task."""
     # Set the persona for the current evaluation
-    set_persona(task.persona)
     
     assistant_agent = AssistantAgent(
         name="assistant",
@@ -66,92 +108,106 @@ async def run_agent_evaluation(task: Task) -> List[Dict]:
         model_client=OpenAIChatCompletionClient(
             model=config.model
         ) if "gpt" in config.model else None,
-        tools=[ask_user],
+        tools=[ask_user, generate_image],
+        # system_message="You are a helpful general-purpose assistant that can answer questions and generate images. You can also ask the user for more information if you deem it necessary if you are unsure about the cultural nuances of the task. Do not ask whether the user needs any further assistance etc. when you are done. DO NOT ASK MORE THAN 3 QUESTIONS TO THE USER OVERALL AND ONLY ASK 1 QUESTION AT A TIME.",
     )
+
     # Define termination condition
     termination = TextMentionTermination("TERMINATE")
+    
+    set_persona(task.prompt_external())
 
     # Define a team
     agent_team = RoundRobinGroupChat([assistant_agent], termination_condition=termination)
 
     # Run the team and stream messages to the console
+    
+    prompt = f"""
+    Do never ask more than a total of 3 follow up questions to the user.
+    
+    Question from the user:
+    {task.intent}
+    """
+    
     stream = agent_team.run_stream(task=task.intent)
 
     task_result = await Console(stream)
     
     # Convert messages to litellm format
     messages = []
+    print(task_result.messages)
     for m in task_result.messages:
         if isinstance(m, TextMessage):
             messages.append({"role": m.source, "content": m.content})
         elif isinstance(m, ToolCallMessage):
             if m.content[0].name == "ask_user":
-                m_call_id = m.content[0].id
-                tool_result_message = None
-                for m_2 in task_result.messages:
-                    if isinstance(m_2, ToolCallResultMessage) and m_2.content[0].call_id == m_call_id:
-                        tool_result_message = m_2
-                        break
-                    
-                if tool_result_message:
-                    messages.append({"role": "user", "content": tool_result_message.content[0].content})
+                messages.append({"role": "assistant", "content": f"{m.content[0].arguments}"})
+            elif m.content[0].name == "generate_image":
+                messages.append({"role": "assistant", "content": f"Generate Image with prompt: {m.content[0].arguments}"})
+        elif isinstance(m, ToolCallResultMessage):
+            if not "IMAGE_" in m.content[0].content:
+                messages.append({"role": "user", "content": f"{m.content[0].content}"})
     
+
     return messages
 
-async def main() -> None:
-    # Set a default persona for testing
-    default_persona = Persona(
-        age=25, 
-        sex="male", 
-        geo=Geo(city="New York", state="NY", country="USA"),
-        political_leaning="liberal"
-    )
-    set_persona(default_persona)
-    
-    assistant_agent = AssistantAgent(
-        name="assistant",
-        model_client=OpenAIChatCompletionClient(
-            model=DEFAULT_MODEL
-        ),
-        tools=[ask_user],
-    )
-    # Define termination condition
-    termination = TextMentionTermination("TERMINATE")
 
-    # Define a team
-    agent_team = RoundRobinGroupChat([assistant_agent], termination_condition=termination)
-
-    # Run the team and stream messages to the console
-    stream = agent_team.run_stream(task="what should I wear to a wedding?")
-
-    task_result = await Console(stream)
-    
-    return task_result
 
 if __name__ == "__main__":
-    # Update the final model selection in the litellm call
-    task_result = asyncio.run(main())
-    messages = []
-    for m in task_result.messages:
-        if isinstance(m, TextMessage):
-            messages.append({"role": m.source, "content": m.content})
-        elif isinstance(m, ToolCallMessage):
-            if m.content[0].name == "ask_user":
-                m_call_id = m.content[0].id
-                tool_result_message = None
-                for m_2 in task_result.messages:
-                    if isinstance(m_2, ToolCallResultMessage) and m_2.content[0].call_id == m_call_id:
-                        tool_result_message = m_2
-                        break
-                    
-                
-                messages.append({"role": "user", "content": tool_result_message.content[0].content})
+    
+    import asyncio
+    from typing import Dict, Any
+    import json
+    
+    # Example task
+    example_task = {
+        "modality": "text2text",
+        "lang": "en", 
+        "domain": "moral discipline and social values",
+        "persona": {
+            "age": 44,
+            "sex": "female",
+            "geo": {
+                "country": "United States",
+                "state": "California", 
+                "city": "San Francisco"
+            },
+            "political_leaning": None,
+            "lang": "en"
+        },
+        "intent": "What should I wear to the wedding next week?",
+        "optimal_response": None,
+        "cultural_nuances": None,
+        "external_files": [],
+        "task_id": 141
+    }
 
-    # Add follow-up question about location
-    messages.append({"role": "user", "content": "Based on the above conversation. Where do you think the user is from? Please make you best guess and do NOT avoid to answer this question."})
+    # Create Task object from dict
+    from dataclasses import dataclass
+    
+    @dataclass
+    class Task:
+        intent: str
+        persona: Dict[str, Any]
+        external_system_prompt: str = "You are roleplaying as a {age} year old {sex} and lives in {location}.\nWhen answering questions, consider your background:\n- Your age and generational perspective\n- Your lifestyle living in {location}\n- Your gender identity and how it might influence your viewpoint\nRespond naturally as this persona would speak, incorporating relevant personal experiences and viewpoints that would be authentic to this character.\nRemember to:\n1. Stay consistent with the persona's background\n2. Use appropriate language and tone for your age and profession\n3. Reference relevant local context from {location} when applicable\n4. If you are asked questions you dont know the answer to, say so.\n"
 
-    response = litellm.completion(
-        model=DEFAULT_MODEL,
-        messages=messages
+        def prompt_external(self):
+            location = f"{self.persona['geo']['city']}, {self.persona['geo']['state']}"
+            return self.external_system_prompt.format(
+                age=self.persona['age'],
+                sex=self.persona['sex'],
+                location=location
+            )
+
+    task = Task(
+        intent=example_task["intent"],
+        persona=example_task["persona"]
     )
-    print(response.choices[0].message.content)
+
+    # Run agent
+    async def main():
+        messages = await run_agent_evaluation(task)
+        print(json.dumps(messages, indent=2))
+
+    asyncio.run(main())
+    

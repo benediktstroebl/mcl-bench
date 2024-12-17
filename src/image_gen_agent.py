@@ -5,9 +5,9 @@ from dalle_tool import DalleTool
 
 
 
-def get_image_gen_agent(prompt: str) -> Agent:
+def get_image_gen_agent(prompt: str, model: str) -> Agent:
     agent = Agent(
-    model=OpenAIChat(id="gpt-4o"),
+    model=OpenAIChat(id=model),
     tools=[DalleTool()],
     debug_mode=True,
     instructions=[
@@ -22,7 +22,7 @@ def get_image_gen_agent(prompt: str) -> Agent:
 
 if __name__ == "__main__":
     agent = Agent(
-    model=OpenAIChat(id="gpt-4o"),
+    model=OpenAIChat(id='gpt-4o'),
     tools=[DalleTool()],
     debug_mode=True,
     instructions=[
